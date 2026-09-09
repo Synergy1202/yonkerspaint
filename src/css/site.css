@@ -4535,12 +4535,9 @@ main:has(.guide-grid) .guide-card h2{
   }
   .guide-showroom-hero{min-height:auto;padding:var(--space-6) var(--space-4)}
   .guide-showroom-hero__panel{padding:var(--space-6) var(--space-5)}
-}
-
-@media(max-width:480px){
-  .home-gallery .gallery-grid{grid-template-columns:1fr}
 }@media (max-width: 440px) {
   .utility-strip {
+    max-height: 8rem;
     overflow: visible;
   }
 
