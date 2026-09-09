@@ -1,0 +1,96 @@
+---
+title: "Local Delivery in Yonkers, NY | Yonkers Paint & Hardware"
+description: "Local delivery from 65 Main Street: paint pails, sheet-rock, lumber and bulk bags to Yonkers, Bronxville, Mt Vernon and Hastings-on-Hudson, from $15 (as of 2026)."
+ogImageFile: "interior-aisle-01.webp"
+pageType: "delivery"
+crumbs:
+  - label: "Home"
+    url: "/index.html"
+  - label: "Services"
+    url: "/services.html"
+  - label: "Local delivery"
+---
+{%- from "icons.njk" import icon -%}
+{%- from "img.njk" import img -%}
+{%- set delivery = services | findBy("id", "local-delivery") -%}
+
+<section class="hero hero--flat hero--inner">
+  <h1>Local delivery</h1>
+  <p>For the loads that will not fit in a car.</p>
+</section>
+
+<div class="wrap guide-body">
+
+  <p class="guide-lede">We deliver locally from {{ site.address.street }} to
+  Yonkers, Bronxville, Mt Vernon and Hastings-on-Hudson, generally within
+  roughly a seven-mile radius, starting at $15 (as of 2026). Call
+  <a href="tel:{{ site.phone.tel }}">{{ site.phone.display }}</a> to arrange
+  one, or ask at the counter when you order.</p>
+
+  <h2>What we deliver</h2>
+
+  <p>The things that are heavy, long or awkward enough that a second trip is
+  not the answer:</p>
+
+  <ul>
+    <li>Paint pails</li>
+    <li>Sheet-rock</li>
+    <li>Lumber</li>
+    <li>Bulk bags</li>
+  </ul>
+
+  <p>If you are not sure whether something qualifies, ask. It is a short
+  conversation and it saves you loading a car badly.</p>
+
+  <h2>Where we deliver</h2>
+
+  <p>Yonkers, Bronxville, Mt Vernon and Hastings-on-Hudson, and most of
+  southern Westchester &mdash; generally within about a seven-mile radius of
+  the store. Further out than that, ask and we will quote it rather than turn
+  it down flat.</p>
+
+  <h2>Curb-side or inside-threshold</h2>
+
+  <p>You can specify where the load lands. Curb-side leaves it at the kerb;
+  inside-threshold brings it just inside the door. Say which you want when you
+  book, along with anything the driver needs to know &mdash; stairs, a narrow
+  drive, a gate code, or where a truck can legally stop on your street.</p>
+
+  <h2>What it costs</h2>
+
+  <p>Delivery starts at $15 (as of 2026). Heavy or pallet loads are quoted
+  individually, because the price depends on the weight, the distance and how
+  the load has to be handled at your end. Prices are current as of 2026;
+  confirm at the counter.</p>
+
+  <h2>Same-day delivery</h2>
+
+  <p>We do offer same-day delivery. Whether it works for a given order depends
+  on what you are having moved and what the day looks like, so call
+  <a href="tel:{{ site.phone.tel }}">{{ site.phone.display }}</a> and ask
+  &mdash; we will tell you straight away whether we can get it to you today.</p>
+
+  <h2>Arranging one</h2>
+
+  <p>The simplest route is to call
+  <a href="tel:{{ site.phone.tel }}">{{ site.phone.display }}</a> during store
+  hours, or to ask at the counter when you are buying. Have the delivery
+  address, a contact number and any access details ready.</p>
+
+  <div class="callout">
+    <h2>Ask about a delivery</h2>
+    <p>Call the store and we will talk through what you need moved and where.</p>
+    <a class="btn btn-light" href="tel:{{ site.phone.tel }}">{{ icon("phone", 18) }}<span>Call {{ site.phone.display }}</span></a>
+  </div>
+
+  <h2>Related</h2>
+
+  <p>Delivery is one of several things we do at the counter &mdash; see
+  <a href="/services.html">all in-store services</a>, including
+  <a href="/services.html#bulk-contractor">bulk and contractor orders</a> if you
+  are buying at pallet quantities. The
+  <a href="/snow.html">ice-melt and snow department</a> and the
+  <a href="/roofing.html">roofing and masonry department</a> are where delivery
+  comes up most often.</p>
+
+</div>

@@ -1,0 +1,17 @@
+{#- Emits an <img> from a manifest key.
+    alt comes from IMAGE-MANIFEST.md via imagemeta.json; width/height come
+    from the actual file so the browser reserves the right box.
+    `variant` selects a display-sized derivative ("card" 480w, "wide" 800w);
+    omit it for the full 1600w asset.
+    Renders nothing if the key is unknown, so a missing asset can never
+    become a broken reference. -#}
+{%- macro img(key, imagemeta, cls, loading, variant, derivatives) -%}
+{%- set m = imagemeta[key] -%}
+{%- if m -%}
+{%- set d = derivatives[variant + "/" + key] if variant else false -%}
+{%- set src = ("/images/" + variant + "/" + key) if d else ("/images/" + key) -%}
+{%- set w = d.width if d else m.width -%}
+{%- set h = d.height if d else m.height -%}
+<img src="{{ src }}" alt="{{ m.alt }}" width="{{ w }}" height="{{ h }}"{% if cls %} class="{{ cls }}"{% endif %} loading="{{ loading or 'lazy' }}" decoding="async">
+{%- endif -%}
+{%- endmacro -%}

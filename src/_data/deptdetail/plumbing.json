@@ -1,0 +1,119 @@
+{
+ "h1": "Plumbing &amp; Pumps Department",
+ "sidebar": [
+  {
+   "id": "pipe",
+   "label": "Pipe &amp; Fittings"
+  },
+  {
+   "id": "valves",
+   "label": "Valves &amp; Water Supply"
+  },
+  {
+   "id": "drain",
+   "label": "Drain &amp; Sewer"
+  },
+  {
+   "id": "pumps",
+   "label": "Pumps &amp; Accessories"
+  },
+  {
+   "id": "repair",
+   "label": "Repair &amp; Maintenance"
+  },
+  {
+   "id": "threading",
+   "label": "Threading &amp; Cutting Service"
+  }
+ ],
+ "sections": [
+  {
+   "id": "pipe",
+   "heading": "Pipe &amp; Fittings",
+   "intro": "Build it right from the rough-in:",
+   "bullets": [
+    "Black iron &amp; galvanized pipe (½″–2″) • nipples cut to length",
+    "Type L copper, PEX, CPVC &amp; PVC Schedule 40",
+    "SharkBite® push-to-connect couplings, tees &amp; elbows",
+    "Brass compression &amp; flare fittings (B&amp;K / Mueller ProLine)"
+   ],
+   "image": "dept-plumbing-cements-01.webp"
+  },
+  {
+   "id": "valves",
+   "heading": "Valves &amp; Water Supply",
+   "intro": "Control flow and hook up fixtures with confidence.",
+   "bullets": [
+    "Full-port brass ball valves ¼″–1″",
+    "Angle &amp; straight stops, ice-maker kits, braided stainless supply lines",
+    "Dielectric unions, check valves and boiler drains",
+    "Lead-free fittings to meet NYS code"
+   ]
+  },
+  {
+   "id": "drain",
+   "heading": "Drain &amp; Sewer",
+   "intro": "From tubs to main line, we’ve got the fix.",
+   "bullets": [
+    "Fernco® flexible couplings &amp; Mission bands",
+    "ABS &amp; PVC traps, clean-outs &amp; DWV fittings",
+    "Pequa® &amp; Drano® drain openers, septic treatments",
+    "Closet flanges, wax rings &amp; toilet repair kits"
+   ],
+   "image": "dept-plumbing-traps-01.webp"
+  },
+  {
+   "id": "pumps",
+   "heading": "Pumps &amp; Accessories",
+   "intro": "Keep basements dry and projects moving.",
+   "bullets": [
+    "Superior Pump™ utility, sump &amp; pedestal pumps (⅓–¾ HP)",
+    "Wide-angle float switches, check valves &amp; basin lids",
+    "Condensate &amp; transfer pumps for HVAC",
+    "Replacement impellers, gaskets &amp; discharge hose kits"
+   ]
+  },
+  {
+   "id": "repair",
+   "heading": "Repair &amp; Maintenance",
+   "intro": "Quick fixes that last.",
+   "bullets": [
+    "Teflon™ thread seal tape &amp; RectorSeal® pipe dope",
+    "O-rings, washers, packing &amp; seats for faucets",
+    "Epoxy putty sticks &amp; RTV silicone",
+    "Replacement toilet tank parts &amp; flappers"
+   ]
+  },
+  {
+   "id": "threading",
+   "heading": "Pipe Threading &amp; Cutting Service",
+   "intro": "Need custom lengths? We cut and thread black iron or galvanized pipe up to 2&quot; while you wait.",
+   "bullets": [
+    "Precise NPT threads for gas, steam or water",
+    "Pipe reaming &amp; deburring included",
+    "Volume discounts for contractors"
+   ],
+   "callout": {
+    "heading": "Questions about your project?",
+    "text": "Talk with our plumbing counter at {{PHONE}} — we’re here to help.",
+    "linkUrl": "/departments.html",
+    "linkLabel": "Back to Departments"
+   }
+  }
+ ],
+ "intro": "The plumbing counter covers pipe and fittings in black iron, galvanized, copper, PEX, CPVC and PVC, brass valves and supply lines, drain and DWV parts, sump and utility pumps, and the tape, dope and washers that finish a repair. We also cut and thread black iron or galvanized pipe up to 2&Prime; NPT while you wait. Most household repairs come down to knowing two things: what the pipe is made of, and what size it actually is. Pipe is sold by nominal size, not by the number you get off a tape measure, so a &frac12;&Prime; copper line measures about 5&frasl;8&Prime; across the outside. Bring the old part if you can &mdash; a failed fitting in hand settles the question faster than any measurement.",
+ "faqs": [
+  {
+   "q": "Push-to-connect or soldered copper?",
+   "a": "Push-to-connect fittings grip the pipe with a stainless ring and seal with an O-ring, so they go together with no flame, no flux and no drying time, and they come apart with a release tool. Soldering costs less per joint and takes up less room, which matters in a tight bay, but it needs a torch, a dry line and some practice. For a repair under time pressure, push-to-connect is the forgiving option; for a long run being built from scratch, the cost difference adds up."
+  },
+  {
+   "q": "What does pipe threading get me?",
+   "a": "Threaded pipe lets you build a run to an exact length instead of working around the fixed sizes on the shelf. We cut and thread black iron or galvanized pipe up to 2&Prime; NPT while you wait, and ream the cut end so the inside diameter is not choked down. Bring your measurement, or the piece you are replacing."
+  },
+  {
+   "q": "Why does my new fitting leak at the threads?",
+   "a": "Tapered pipe threads seal by wedging metal against metal, so they need a thread sealant to fill the spiral gap: PTFE tape wound in the direction of tightening, or pipe dope, or both. Over-tightening does not fix a leak &mdash; past a certain point it stretches the female fitting and makes it worse. Compression and flare fittings work differently and generally want no sealant on the sealing surface at all."
+  }
+ ]
+}

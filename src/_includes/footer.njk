@@ -1,0 +1,64 @@
+{#- Every value here comes from _data/. No hand-typed NAP anywhere.
+    The department and page columns double as a site-wide internal-linking
+    surface: every department and every top-level page is one click from
+    every page on the site. -#}
+{%- from "icons.njk" import icon -%}
+
+<footer class="site-footer">
+  <div class="footer-grid">
+
+    <nav class="footer-col" aria-labelledby="footerDepts">
+      <h2 id="footerDepts">Departments</h2>
+      <ul class="footer-links">
+        {%- for d in departments %}
+        <li><a href="{{ d.url }}">{{ d.name }}</a></li>
+        {%- endfor %}
+        <li><a href="/departments.html"><strong>All departments</strong></a></li>
+      </ul>
+    </nav>
+
+    <nav class="footer-col" aria-labelledby="footerServices">
+      <h2 id="footerServices">Services &amp; pages</h2>
+      <ul class="footer-links">
+        {%- for s in services %}
+        <li><a href="{{ s.detailUrl or ('/services.html#' + s.id) }}">{{ s.name | safe }}</a></li>
+        {%- endfor %}
+      </ul>
+      <ul class="footer-links footer-links--pages">
+        {%- for g in collections.guides %}
+        <li><a href="{{ g.url }}">{{ g.data.shortTitle }}</a></li>
+        {%- endfor %}
+        <li><a href="/guides/"><strong>All guides</strong></a></li>
+        <li><a href="/about.html">About us</a></li>
+        <li><a href="/reviews.html">Reviews</a></li>
+        <li><a href="/faq.html">FAQ</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="footer-col footer-col--nap">
+      <h2>{{ icon("pin", 20) }}<span>Visit us</span></h2>
+      <address>
+        {{ site.address.street }}<br>
+        {{ site.address.city }}, {{ site.address.region }} {{ site.address.postalCode }}
+      </address>
+      <p><a class="footer-phone" href="tel:{{ site.phone.tel }}">{{ icon("phone", 18) }}<span>{{ site.phone.display }}</span></a></p>
+      <p><a href="{{ site.map.link }}" target="_blank" rel="noopener">Get directions</a></p>
+
+      <h2 class="footer-hours-head">{{ icon("clock", 20) }}<span>Hours</span></h2>
+      <ul class="hours">
+        {%- for h in site.hours %}
+        <li><span>{{ h.label }}</span> <span>{{ h.display }}</span></li>
+        {%- endfor %}
+      </ul>
+
+      <ul class="footer-social">
+        <li><a href="{{ site.instagram.url }}" target="_blank" rel="noopener">Instagram {{ site.instagram.handle }}</a></li>
+        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <p class="copyright">&copy; <span id="year">{{ site.copyrightYear }}</span> {{ site.name }}. All rights reserved. Family-run since {{ site.foundingDate }}. <span class="credit">Architected by <a href="https://alinquality.com">AliNQuality</a>.</span></p>
+</footer>

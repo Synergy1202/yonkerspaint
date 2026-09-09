@@ -1,0 +1,124 @@
+{
+ "h1": "Fasteners &amp; Hardware Department",
+ "sidebar": [
+  {
+   "id": "screws",
+   "label": "Screws &amp; Wood Fasteners"
+  },
+  {
+   "id": "bolts",
+   "label": "Bolts, Nuts &amp; Washers"
+  },
+  {
+   "id": "anchors",
+   "label": "Anchors &amp; Concrete"
+  },
+  {
+   "id": "hardware",
+   "label": "Builders Hardware"
+  },
+  {
+   "id": "special",
+   "label": "Specialty &amp; Hard-to-Find"
+  },
+  {
+   "id": "keys",
+   "label": "Key Cutting &amp; Accessories"
+  }
+ ],
+ "sections": [
+  {
+   "id": "screws",
+   "heading": "Screws &amp; Wood Fasteners",
+   "intro": "From cabinetry to deck builds.",
+   "bullets": [
+    "Wood, sheet-metal &amp; machine screws (#4 to ½″ dia.)",
+    "GRK &amp; PowerPro® exterior deck screws",
+    "Structural lag &amp; timber screws up to 10″",
+    "Drywall, pocket-hole &amp; cabinet hardware screws"
+   ],
+   "image": "dept-fasteners-bins-01.webp"
+  },
+  {
+   "id": "bolts",
+   "heading": "Bolts, Nuts &amp; Washers",
+   "intro": "SAE, metric, coarse and fine thread — sold loose or boxed.",
+   "bullets": [
+    "Hex, carriage, lag &amp; stove bolts — zinc &amp; stainless",
+    "Grade-5/Grade-8 and metric class 8.8 / 10.9",
+    "Flat, fender, lock &amp; finishing washers",
+    "Nylon-insert locknuts, wing nuts &amp; acorn nuts"
+   ],
+   "image": "dept-fasteners-wall-01.webp"
+  },
+  {
+   "id": "anchors",
+   "heading": "Anchors &amp; Concrete Fasteners",
+   "intro": "Secure it to block, brick or drywall with confidence.",
+   "bullets": [
+    "Powers® blue Tapcon concrete screws (¼″–⅜″)",
+    "Wedge, sleeve &amp; drop-in anchors (¼″–¾″)",
+    "Toggle bolts, Molly® and Zip-It® drywall anchors",
+    "Simpson Strong-Tie structural connectors"
+   ],
+   "image": "dept-fasteners-pegboard-01.webp"
+  },
+  {
+   "id": "hardware",
+   "heading": "Builders Hardware",
+   "intro": "The finishing touches for doors, gates and projects.",
+   "bullets": [
+    "Door hinges, strike plates &amp; hasps",
+    "Angle brackets, mending plates &amp; joist hangers",
+    "Gate kits, spring latches &amp; chain-link hardware",
+    "Cabinet knobs, pulls &amp; magnetic catches"
+   ],
+   "image": "dept-fasteners-pegboard-02.webp"
+  },
+  {
+   "id": "special",
+   "heading": "Specialty &amp; Hard-to-Find Fasteners",
+   "intro": "If nobody else stocks it, we probably do.",
+   "bullets": [
+    "Metric socket-head cap screws &amp; set screws",
+    "Brass &amp; nylon hardware for corrosion resistance",
+    "Threaded rod (zinc, stainless &amp; B7) cut to length",
+    "Automotive clips, cotter pins &amp; roll pins"
+   ],
+   "image": "dept-fasteners-aisle-01.webp"
+  },
+  {
+   "id": "keys",
+   "heading": "Key Cutting &amp; Accessories",
+   "intro": "Duplicate most house, padlock and automotive keys while you wait.",
+   "bullets": [
+    "Ilco® &amp; Kwikset® house key blanks",
+    "Chip-less automotive &amp; motorcycle blanks",
+    "Colored, novelty &amp; contractor multi-packs",
+    "Key rings, tags &amp; cabinet locks"
+   ],
+   "image": "service-key-cutting-01.webp",
+   "callout": {
+    "heading": "Need a specific fastener counted out?",
+    "text": "Call {{PHONE}} or stop in — we sell by the piece, not just by the box.",
+    "linkUrl": "/departments.html",
+    "linkLabel": "Back to Departments"
+   }
+  }
+ ],
+ "intro": "Our fastener aisle holds screws, bolts, nuts, washers, anchors and builders hardware in zinc, stainless and brass, in SAE and metric, and we sell by the piece as well as by the box &mdash; useful when a job needs four of something rather than a hundred. The same aisle handles key cutting. Picking a fastener is mostly about three questions: what is it going into, how much load is on it, and will it get wet. Wood, drywall, masonry and steel each want a different fastener, and drywall in particular holds almost nothing on its own, so the anchor is doing the work — the <a href=\"/guides/wall-anchors.html\">wall anchor guide</a> covers how to choose one. Outdoors or anywhere damp, stainless or a proper coating is what stops a rusted head shearing off later.",
+ "faqs": [
+  {
+   "q": "How do I choose a wall anchor?",
+   "a": "Start with what the wall is. Into a stud, skip the anchor and use a screw long enough to bite about an inch of solid wood. Into hollow drywall, a plastic expansion plug suits light loads, a self-drilling threaded anchor holds more, and a toggle that spreads behind the board holds the most &mdash; that is what a heavy shelf or a grab bar needs. Into brick, block or concrete, you drill with a masonry bit and use a screw or sleeve anchor sized to the hole. If the load is overhead or safety-critical, find a stud or a structural fixing."
+  },
+  {
+   "q": "What do the numbers on a screw mean?",
+   "a": "For a wood screw, the first number is the gauge &mdash; the shank diameter, where a bigger number is thicker &mdash; and the second is length in inches, so a #8 x 1&frac12;&Prime; is a mid-weight screw an inch and a half long. Machine screws and bolts are called out by diameter, threads per inch and length, as in &frac14;-20 x 1&Prime;. Metric runs diameter, thread pitch, length: M6 x 1.0 x 20. If you are matching an existing fastener, bring it in; a gauge on the counter settles it in seconds."
+  },
+  {
+   "q": "What is a key blank, and why can some keys not be copied?",
+   "a": "A blank is an uncut key with the right profile for a given lock brand and keyway &mdash; the ridges along its length that let it enter that cylinder at all. Cutting a copy means matching the blank first, then grinding the depths from your original. Two things stop a copy: a key on a restricted or patented profile, where the blanks are controlled and only an authorised dealer can supply them, and a key with a transponder chip or high-security laser milling, which needs programming or specialised equipment. Ordinary house, office and padlock keys are the everyday case; the <a href=\"/guides/key-types.html\">key types guide</a> covers what can and cannot be copied."
+  }
+ ]
+}

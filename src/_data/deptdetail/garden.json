@@ -1,0 +1,103 @@
+{
+ "h1": "Garden &amp; Seasonal Department",
+ "sidebar": [
+  {
+   "id": "handtools",
+   "label": "Hand Tools"
+  },
+  {
+   "id": "watering",
+   "label": "Watering &amp; Irrigation"
+  },
+  {
+   "id": "lawncare",
+   "label": "Lawn &amp; Garden Care"
+  },
+  {
+   "id": "winter",
+   "label": "Snow &amp; Ice Control"
+  },
+  {
+   "id": "refuse",
+   "label": "Refuse &amp; Compost"
+  }
+ ],
+ "sections": [
+  {
+   "id": "handtools",
+   "heading": "Hand Tools",
+   "intro": "Quality fiberglass and hardwood handles that stand up to tough jobs.",
+   "bullets": [
+    "Garant® round-point &amp; square shovels, spades &amp; trenching tools",
+    "Leaf, bow &amp; garden rakes",
+    "Hoes, cultivators &amp; hand trowels",
+    "Wheelbarrows &amp; replacement handles"
+   ]
+  },
+  {
+   "id": "watering",
+   "heading": "Watering &amp; Irrigation",
+   "intro": "Keep lawns lush and beds blooming.",
+   "bullets": [
+    "Heavy-duty garden hoses (⅝″–¾″, 25–100 ft) &amp; repair ends",
+    "Spray nozzles, wands &amp; pattern sprinklers",
+    "Timers, Y-splitters &amp; quick-connect fittings",
+    "Soaker hose &amp; drip irrigation starter kits"
+   ]
+  },
+  {
+   "id": "lawncare",
+   "heading": "Lawn &amp; Garden Care",
+   "intro": "Everything you need for greener grass and thriving beds.",
+   "bullets": [
+    "Grass seed, starter &amp; winterizer fertilizers",
+    "Organic plant food, bone meal &amp; compost accelerator",
+    "Mulch, topsoil &amp; peat moss in convenient bags",
+    "Pest &amp; weed control solutions (Sevin, Spectracide)"
+   ]
+  },
+  {
+   "id": "winter",
+   "heading": "Snow &amp; Ice Control",
+   "intro": "Be ready when the forecast turns.",
+   "bullets": [
+    "Ice melt (rock salt, pet-safe &amp; calcium blends)",
+    "Garant® poly &amp; steel snow shovels &amp; pushers",
+    "Roof rakes &amp; driveway markers",
+    "Windshield de-icer &amp; lock lubricants"
+   ]
+  },
+  {
+   "id": "refuse",
+   "heading": "Refuse, Leaf &amp; Compost",
+   "intro": "Clean up and recycle yard waste the smart way.",
+   "bullets": [
+    "Husky® contractor &amp; leaf bags",
+    "Plastic &amp; galvanized trash cans with lids",
+    "Pop-up garden bins &amp; tarps",
+    "Backyard compost tumblers &amp; accessories"
+   ],
+   "callout": {
+    "heading": "Need bulk salt or mulch delivered?",
+    "text": "Call {{PHONE}} — local delivery available.",
+    "linkUrl": "/departments.html",
+    "linkLabel": "Back to Departments"
+   }
+  }
+ ],
+ "intro": "The seasonal aisle changes with the calendar: shovels, rakes, hoes and hand tools, hoses, nozzles and sprinklers, grass seed, fertilizer, soil and mulch, pest and weed control, and refuse and compost gear &mdash; then ice melt and snow shovels when the weather turns (see the <a href=\"/guides/choosing-ice-melt.html\">ice-melt guide</a>). Timing matters more than product choice for most lawn and garden work. Cool-season grasses of the sort grown in this part of New York establish best in late summer and early autumn, when the soil is still warm but the heat has broken, and spring is the second-best window. Watering deeply and less often pushes roots down; a light daily sprinkle keeps them at the surface where they dry out first.",
+ "faqs": [
+  {
+   "q": "When is the best time to seed a lawn here?",
+   "a": "For the cool-season grasses common in the Northeast &mdash; fescue, ryegrass, Kentucky bluegrass &mdash; late summer into early autumn is the strongest window. The soil is still warm enough for fast germination, nights have cooled, and the weeds that compete hardest in spring are past their peak. Spring seeding works but gives the new grass less time to root before summer heat. Either way, seed needs consistent moisture until it is up, which usually means light watering more than once a day for the first couple of weeks."
+  },
+  {
+   "q": "What hose size and length should I get?",
+   "a": "Most household hoses are &frac58;&Prime; inside diameter, which balances flow against weight and is what nozzles and sprinklers are designed around. &frac34;&Prime; moves noticeably more water and is worth it on long runs or with several sprinklers, at the cost of a much heavier hose. Length costs you pressure: every extra foot drops flow a little, so buying far more hose than you need makes sprinklers work worse. Measure the longest run you actually water and add a little slack."
+  },
+  {
+   "q": "Do I need to drain hoses and outdoor spigots for winter?",
+   "a": "Yes. Water left in a hose or in the pipe behind an outdoor spigot expands when it freezes and can split either one. Disconnect and drain hoses before the first hard freeze, store them somewhere they will not be crushed, and shut off and drain the supply to the spigot if it is not a frost-free type. A frost-free hydrant still needs the hose disconnected, or it cannot drain and the freeze protection does nothing."
+  }
+ ]
+}

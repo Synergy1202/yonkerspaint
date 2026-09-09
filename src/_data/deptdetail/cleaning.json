@@ -1,0 +1,106 @@
+{
+ "h1": "Cleaning &amp; Jan-San Department",
+ "sidebar": [
+  {
+   "id": "bags",
+   "label": "Trash Bags &amp; Liners"
+  },
+  {
+   "id": "mops",
+   "label": "Mops, Brooms &amp; Buckets"
+  },
+  {
+   "id": "chem",
+   "label": "Household &amp; Industrial Cleaners"
+  },
+  {
+   "id": "lubes",
+   "label": "Lubricants &amp; Specialty Aerosols"
+  },
+  {
+   "id": "disp",
+   "label": "Dispensers &amp; Paper Goods"
+  }
+ ],
+ "sections": [
+  {
+   "id": "bags",
+   "heading": "Trash Bags &amp; Liners",
+   "intro": "Contractor-tough or kitchen-fresh, we’ve got the right gauge.",
+   "bullets": [
+    "Husky® contractor bags (3-mil, 42- to 55-gal)",
+    "Kitchen tall drawstring &amp; recycling liners",
+    "Leaf &amp; yard kraft paper bags",
+    "Drum liners &amp; clear poly bags"
+   ]
+  },
+  {
+   "id": "mops",
+   "heading": "Mops, Brooms &amp; Buckets",
+   "intro": "O-Cedar quality for spotless floors.",
+   "bullets": [
+    "Rinse-Clean™ spin mop &amp; refill heads",
+    "Angle brooms, push brooms &amp; dustpans",
+    "Microfiber cloths &amp; dusters",
+    "Replacement handles &amp; wringer buckets"
+   ],
+   "image": "dept-cleaning-brooms-01.webp"
+  },
+  {
+   "id": "chem",
+   "heading": "Household &amp; Industrial Cleaners",
+   "intro": "Cut grease, grime and germs.",
+   "bullets": [
+    "Krud Kutter®, Simple Green® &amp; Zep® degreasers",
+    "Bleach, ammonia &amp; disinfectant sprays",
+    "CLR® calcium &amp; rust remover, Lime-A-Way®",
+    "Floor wax strippers &amp; neutral pH cleaners"
+   ],
+   "image": "dept-cleaning-aisle-01.webp"
+  },
+  {
+   "id": "lubes",
+   "heading": "Lubricants &amp; Specialty Aerosols",
+   "intro": "Fix squeaks, loosen rust and protect surfaces.",
+   "bullets": [
+    "WD-40® Original, Specialist Dry Lube &amp; White Lithium",
+    "PB Blaster® penetrating oil",
+    "3-in-One multi-purpose oil &amp; silicone spray",
+    "Brake cleaner, contact cleaner &amp; electrical safe degreaser"
+   ]
+  },
+  {
+   "id": "disp",
+   "heading": "Dispensers &amp; Paper Goods",
+   "intro": "Stock the shop, office or home.",
+   "bullets": [
+    "Sparkle® paper towels &amp; 2-ply bath tissue",
+    "Folded shop towels &amp; microfiber rolls",
+    "Soap dispensers &amp; refills (foaming &amp; lotion)",
+    "Hand sanitizer pumps &amp; wipes"
+   ],
+   "image": "dept-cleaning-aisle-02.webp",
+   "callout": {
+    "heading": "Need jan-san in bulk?",
+    "text": "Ask about contractor packs and local delivery—call {{PHONE}}.",
+    "linkUrl": "/departments.html",
+    "linkLabel": "Back to Departments"
+   }
+  }
+ ],
+ "intro": "Our cleaning and jan-san aisle stocks contractor and kitchen trash bags, mops, brooms, buckets and microfiber, household and industrial cleaners, degreasers and disinfectants, WD-40 and specialty aerosols, and paper goods and dispensers. Two things are worth knowing before you buy. Trash bags are rated in mils &mdash; thousandths of an inch &mdash; and the number matters more than the gallon size: a 3-mil contractor bag will carry demolition debris that tears a 0.9-mil kitchen liner instantly. And most concentrated cleaners are sold to be diluted; using them neat wastes product, leaves a film that attracts dirt faster, and on some surfaces does damage. The dilution on the label is the tested one.",
+ "faqs": [
+  {
+   "q": "What do the mil ratings on trash bags mean?",
+   "a": "A mil is a thousandth of an inch of film thickness. Kitchen liners run around 0.7&ndash;1 mil, general commercial liners around 1.5, and contractor bags 3 mil and up. Thickness is what resists puncture and tearing, so it is the number that matters when the load has corners: sheetrock offcuts, tile, brush, anything with a broken edge. For soft rubbish, a thinner bag in the right size is cheaper and works fine. Gallon capacity tells you the volume, not the strength."
+  },
+  {
+   "q": "Can I mix cleaning products to make them work better?",
+   "a": "No &mdash; and two combinations are genuinely dangerous. Bleach mixed with any ammonia-containing cleaner produces chloramine gas; bleach mixed with an acid, including some descalers and toilet cleaners, releases chlorine gas. Both cause real harm in an ordinary bathroom-sized room. Beyond the hazard, mixing usually cancels the products out rather than combining them. Use one product, rinse, ventilate, and use the next if you need to."
+  },
+  {
+   "q": "What is the difference between cleaning, sanitizing and disinfecting?",
+   "a": "Cleaning physically removes soil and a good share of what is living in it, usually with detergent and agitation. Sanitizing reduces the remaining microorganisms to a level judged safe. Disinfecting is the strongest step and is aimed at killing them on a hard surface. Disinfectants only work if the surface is clean first, and nearly all of them need a stated dwell time &mdash; the surface has to stay visibly wet for that long. Wiping a disinfectant straight off does very little."
+  }
+ ]
+}

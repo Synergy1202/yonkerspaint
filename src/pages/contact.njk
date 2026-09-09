@@ -1,0 +1,161 @@
+---
+title: "Contact & Directions — 65 Main Street, Yonkers, NY | Yonkers Paint & Hardware"
+eleventyComputed:
+  description: "Questions? Need a quote? Contact {{ site.name | safe }} by phone, email or visit us at {{ site.address.street }}, {{ site.address.city }} {{ site.address.region }} {{ site.address.postalCode }}."
+ogTitle: "Contact Yonkers Paint & Hardware"
+ogDescription: "Call, email or visit Yonkers Paint & Hardware – family-owned since 1966."
+ogImageFile: "storefront-exterior-01.webp"
+bodyClass: "contact-page"
+noCta: true
+---
+{%- from "img.njk" import img -%}
+{%- from "icons.njk" import icon -%}
+
+<section class="contact-showroom-hero hero hero--photo" style="background-image:url('/images/storefront-exterior-01.webp')">
+  <div class="contact-showroom-hero__panel">
+    <p class="eyebrow">65 Main Street &bull; Getty Square</p>
+    <h1>Visit Yonkers Paint &amp; Hardware in Getty Square</h1>
+    <p class="contact-showroom-hero__lede">Call, email or stop by our downtown Yonkers store for paint, hardware, project supplies and practical help at the counter.</p>
+    <div class="contact-showroom-hero__actions">
+      <a class="btn" href="tel:{{ site.phone.tel }}">Call {{ site.phone.display }}</a>
+      <a class="btn btn-ghost" href="{{ site.map.link }}" target="_blank" rel="noopener">Get Directions</a>
+    </div>
+    <div class="contact-showroom-hero__proof" aria-label="Store information">
+      <span><strong>Downtown Yonkers</strong><small>Getty Square</small></span>
+      <span><strong>Wheelchair accessible</strong><small>Store entrance</small></span>
+      <span><strong lang="es">Hablamos espa&ntilde;ol</strong><small>Call or visit us</small></span>
+    </div>
+  </div>
+</section>
+
+<section class="contact-actions" aria-label="Contact options">
+  <a class="contact-action-card" href="tel:{{ site.phone.tel }}">
+    <span class="contact-action-card__icon">{{ icon("phone", 22) }}</span>
+    <span><strong>Call the store</strong><small>{{ site.phone.display }}</small></span>
+    <span aria-hidden="true">&rarr;</span>
+  </a>
+  <a class="contact-action-card" href="{{ site.map.link }}" target="_blank" rel="noopener">
+    <span class="contact-action-card__icon">{{ icon("pin", 22) }}</span>
+    <span><strong>Get directions</strong><small>{{ site.address.street }}, Getty Square</small></span>
+    <span aria-hidden="true">&rarr;</span>
+  </a>
+  <a class="contact-action-card" href="mailto:{{ site.email }}">
+    <span class="contact-action-card__icon">{{ icon("chat", 22) }}</span>
+    <span><strong>Email us</strong><small>{{ site.email }}</small></span>
+    <span aria-hidden="true">&rarr;</span>
+  </a>
+</section>
+
+<section class="contact-intro" aria-labelledby="contactIntroHeading">
+  <div>
+    <p class="section-kicker">Local help, in person</p>
+    <h2 id="contactIntroHeading">Come in with the list, the part, the color or the question.</h2>
+  </div>
+  <p>We are in Getty Square in downtown Yonkers. Whether you know exactly what you need or you are still figuring it out, calling or visiting the store is often the fastest way to get pointed in the right direction.</p>
+</section>
+
+<div class="contact-wrap contact-showroom-layout">
+
+  <section class="contact-info contact-main-card" aria-labelledby="storeInfoHeading">
+    <p class="section-kicker">Store information</p>
+    <h2 id="storeInfoHeading">Plan Your Visit</h2>
+
+    <div class="contact-store-summary">
+      <div>
+        <p class="contact-store-summary__label">Address</p>
+        <address>
+          {{ site.address.street }}<br>
+          {{ site.address.city }}, {{ site.address.region }}&nbsp;{{ site.address.postalCode }}
+        </address>
+      </div>
+      <div>
+        <p class="contact-store-summary__label">Phone</p>
+        <p><a href="tel:{{ site.phone.tel }}" class="phone">{{ site.phone.display }}</a></p>
+      </div>
+    </div>
+
+    <div class="contact-facts">
+      <div class="contact-fact">
+        {{ icon("pin", 18) }}
+        <div><strong>Getty Square location</strong><p>Street parking along Main Street, plus parking garages nearby.</p></div>
+      </div>
+      <div class="contact-fact">
+        {{ icon("box", 18) }}
+        <div><strong>Accessible entrance</strong><p>The store entrance is wheelchair accessible.</p></div>
+      </div>
+      <div class="contact-fact">
+        {{ icon("wrench", 18) }}
+        <div><strong>Flexible ways to pay</strong><p>Credit and debit cards and contactless mobile payments are accepted.</p></div>
+      </div>
+    </div>
+
+    <div class="contact-hours-block">
+      <p class="contact-store-summary__label">Store hours</p>
+      <ul class="hours">
+        {%- for h in site.hours %}
+        <li><span>{{ h.label }}</span> <span>{{ h.display }}</span></li>
+        {%- endfor %}
+      </ul>
+    </div>
+
+    <p class="lang-note contact-language-note" lang="es">
+      <strong>&iexcl;Bienvenidos! Hablamos espa&ntilde;ol.</strong>
+      Ll&aacute;menos al <a href="tel:{{ site.phone.tel }}">{{ site.phone.display }}</a>
+      o vis&iacute;tenos en {{ site.address.street }}, {{ site.address.city }},
+      {{ site.address.region }} {{ site.address.postalCode }}. Con gusto le ayudamos
+      a encontrar lo que necesita.
+    </p>
+
+    {%- for item in placements.contactFigure %}
+    <figure class="figure contact-store-photo">
+      {{ img(item.image, imagemeta, false, "lazy", item.variant, derivatives) }}
+      <figcaption>{{ item.caption }}</figcaption>
+    </figure>
+    {%- endfor %}
+
+    <div class="map contact-map">
+      <iframe loading="lazy" title="Map to {{ site.name }}"
+              src="{{ site.map.embed }}"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </section>
+
+  <aside class="contact-message-column">
+    <form class="contact-form" action="{{ site.form.action }}" method="POST">
+      <p class="section-kicker">Questions or a quote</p>
+      <h2>Send Us a Message</h2>
+      <p class="contact-form__lede">Tell us what you are working on and the best way to reach you. For something time-sensitive, calling the store is usually fastest.</p>
+
+      <input type="hidden" name="_honey" style="display:none">
+      <input type="hidden" name="_next" value="{{ site.origin }}/thanks.html">
+      <input type="hidden" name="_subject" value="Website enquiry - {{ site.name }}">
+
+      <div class="field">
+        <label for="name">Name *</label>
+        <input required id="name" type="text" name="name" autocomplete="name" placeholder="Your Name">
+      </div>
+      <div class="field">
+        <label for="email">Email *</label>
+        <input required id="email" type="email" name="email" autocomplete="email" placeholder="you@example.com">
+      </div>
+      <div class="field">
+        <label for="phone">Phone</label>
+        <input id="phone" type="tel" name="phone" autocomplete="tel" placeholder="Optional">
+      </div>
+      <div class="field">
+        <label for="msg">Message *</label>
+        <textarea required id="msg" name="message" placeholder="What can we help you with?"></textarea>
+      </div>
+
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+
+    <div class="contact-callout">
+      <p class="section-kicker">Need an answer sooner?</p>
+      <h3>Call the counter.</h3>
+      <p>For product availability, service questions or something you need today, call us directly.</p>
+      <a href="tel:{{ site.phone.tel }}">{{ site.phone.display }} &rarr;</a>
+    </div>
+  </aside>
+
+</div>

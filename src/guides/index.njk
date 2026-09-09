@@ -1,0 +1,27 @@
+---
+eleventyExcludeFromCollections: true
+title: "Home Project Guides from a Yonkers Hardware Store | Yonkers Paint & Hardware"
+description: "Practical guides from the counter at 65 Main Street: choosing ice melt, picking paint sheen, wall anchors, painting prep, and what keys can be copied."
+---
+<section class="hero hero--flat hero--inner">
+  <h1>Guides</h1>
+  <p>Plain answers to the questions we get asked across the counter.</p>
+</section>
+
+<div class="wrap">
+  <p class="guides-lede">These are the explanations we end up giving in person
+  several times a week &mdash; what the differences actually are, and which one
+  matters for your job. No product pitches, just the reasoning.</p>
+
+  <ul class="guide-grid">
+    {%- for g in collections.guides %}
+    <li>
+      <a class="guide-card" href="{{ g.url }}">
+        <h2>{{ g.data.h1 }}</h2>
+        <p>{{ g.data.lede }}</p>
+        <span class="guide-more">Read the guide &rarr;</span>
+      </a>
+    </li>
+    {%- endfor %}
+  </ul>
+</div>

@@ -1,0 +1,146 @@
+---
+title: "Key Cutting, Paint Color Matching & Delivery in Yonkers, NY | Yonkers Paint & Hardware"
+description: "Key duplication, paint matching, pipe threading, delivery and other professional services from Yonkers Paint & Hardware."
+ogTitle: "In-Store Services | Yonkers Paint & Hardware"
+ogDescription: "Discover everything our full-service neighborhood hardware store can do for you."
+ogImageFile: "service-key-cutting-action-01.webp"
+pageType: "services"
+bodyClass: "services-page"
+noCta: true
+---
+{%- from "img.njk" import img -%}
+{%- from "icons.njk" import icon -%}
+
+<section class="services-showroom-hero hero hero--photo" style="background-image:url('/images/service-key-cutting-action-01.webp')">
+  <div class="services-showroom-hero__panel">
+    <p class="eyebrow">Service counter &bull; Getty Square</p>
+    <h1>Hardware Store Services in Yonkers, NY</h1>
+    <p class="services-showroom-hero__lede">Key duplication, paint color matching, pipe threading, delivery and practical help from people who work with these products every day.</p>
+    <div class="services-showroom-hero__actions">
+      <a class="btn" href="#service-list">Explore Services</a>
+      <a class="btn btn-ghost" href="tel:{{ site.phone.tel }}">Call {{ site.phone.display }}</a>
+    </div>
+    <div class="services-showroom-hero__proof" aria-label="Popular store services">
+      <span><strong>Keys</strong><small>Duplication &amp; cutting</small></span>
+      <span><strong>Paint</strong><small>Color matching</small></span>
+      <span><strong>Project help</strong><small>At the counter</small></span>
+    </div>
+  </div>
+</section>
+
+<section class="services-intro" aria-labelledby="servicesIntroHeading">
+  <div class="services-intro__media">
+    <figure class="figure">
+      {{ img("service-counter-portrait-01.webp", imagemeta, false, "lazy", "wide", derivatives) }}
+      <figcaption>Mike, the owner, at the service counter.</figcaption>
+    </figure>
+  </div>
+  <div class="services-intro__copy">
+    <p class="section-kicker">More than shelves</p>
+    <h2 id="servicesIntroHeading">Real help for the part of the job that needs a person.</h2>
+    <p>Some jobs are easier when you can bring the key, color, fitting or project question to the counter. Our in-store services are built around that kind of practical help for homeowners, property managers and contractors in Yonkers.</p>
+    <p class="services-intro__note"><strong>Planning a visit?</strong> Service availability and pricing can vary by job. Call the store if you want to confirm before you come in.</p>
+    <p class="price-note">Prices current as of 2026; confirm at the counter.</p>
+  </div>
+</section>
+
+<section class="services services-catalog" id="service-list" aria-labelledby="serviceListHeading">
+  <header class="services-catalog__head">
+    <p class="section-kicker">At the service counter</p>
+    <h2 id="serviceListHeading">Services that keep projects moving</h2>
+    <p>Choose a service below for what to bring, when it helps and any department or guide that can make the next step easier.</p>
+  </header>
+
+  <div class="grid">
+    {%- for s in services %}
+    <article class="card service-catalog-card" id="{{ s.id }}">
+      {%- if s.image %}
+      <figure class="figure figure--card service-catalog-card__media">
+        {{ img(s.image, imagemeta, false, "lazy", "card", derivatives) }}
+        <figcaption>{{ s.caption }}</figcaption>
+      </figure>
+      {%- endif %}
+      <div class="service-catalog-card__body">
+        <div class="service-catalog-card__title">
+          <p class="service-card-kicker">Store service</p>
+          <h3>{% if s.icon %}{{ icon(s.icon) }}{% endif %}<span>{{ s.name | safe }}</span></h3>
+          {%- if s.badge %}<span class="badge">{{ s.badge | safe }}</span>{% endif %}
+        </div>
+        <ul class="service-catalog-card__bullets">
+          {%- for b in s.bullets %}
+          <li>{{ b | safe }}</li>
+          {%- endfor %}
+        </ul>
+        {%- if s.noteBadge %}
+        <p class="badge service-catalog-card__note-badge">{{ s.noteBadge | safe }}</p>
+        {%- endif %}
+        {%- if s.what %}
+        <dl class="service-detail service-catalog-card__details">
+          <div><dt>What it is</dt><dd>{{ s.what | safe }}</dd></div>
+          <div><dt>When you need it</dt><dd>{{ s.when | safe }}</dd></div>
+          <div><dt>What to bring</dt><dd>{{ s.bring | safe }}</dd></div>
+        </dl>
+        {%- endif %}
+        {%- if s.note %}
+        <p class="service-note">{{ s.note | safe }}</p>
+        {%- endif %}
+        <div class="service-catalog-card__links">
+          {%- if s.detailUrl %}
+          <p class="service-detail-link"><a href="{{ s.detailUrl }}">Full {{ s.name | safe | lower }} details &rarr;</a></p>
+          {%- endif %}
+          {%- if s.relatedGuides.length %}
+          <p class="service-guides"><strong>Read more:</strong>
+            {%- for gslug in s.relatedGuides %}
+            {%- set g = collections.guides | findBy("data.slug", gslug) %}
+            {%- if g %} <a href="{{ g.url }}">{{ g.data.shortTitle }}</a>{% if not loop.last %},{% endif %}
+            {%- endif %}
+            {%- endfor %}.
+          </p>
+          {%- endif %}
+          {%- if s.relatedDepartments.length %}
+          <p class="service-depts"><strong>Shop:</strong>
+            {%- for slug in s.relatedDepartments %}
+            {%- set r = departments | findBy("slug", slug) %}
+            {%- if r %} <a href="{{ r.url }}">{{ r.name }}</a>{% if not loop.last %} and{% endif %}
+            {%- endif %}
+            {%- endfor %}.</p>
+          {%- endif %}
+        </div>
+      </div>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="services-faq" aria-labelledby="serviceFaqHeading">
+  <div class="services-faq__heading">
+    <p class="section-kicker">Before you come in</p>
+    <h2 id="serviceFaqHeading">Questions about our Yonkers store services?</h2>
+    <p>These are the practical questions customers ask most often before bringing a project to the counter.</p>
+  </div>
+  <div class="services-faq__list">
+    {%- for item in servicefaqs %}
+    <details>
+      <summary>{{ item.q | safe }}</summary>
+      <p>{{ item.a | safe }}</p>
+    </details>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="services-project-cta" aria-labelledby="servicesCtaHeading">
+  <div class="services-project-cta__copy">
+    <p class="section-kicker">Not sure which service you need?</p>
+    <h2 id="servicesCtaHeading">Bring the problem to the counter.</h2>
+    <p>Call ahead or stop by {{ site.address.street }} in Getty Square. We can help you figure out the next practical step and point you toward the right department or service.</p>
+    <div class="services-project-cta__actions">
+      <a class="btn" href="tel:{{ site.phone.tel }}">Call {{ site.phone.display }}</a>
+      <a class="btn btn-ghost" href="{{ site.map.link }}" target="_blank" rel="noopener">Get Directions</a>
+    </div>
+  </div>
+  <dl class="services-project-cta__facts">
+    <div><dt>Location</dt><dd>{{ site.address.street }}, Getty Square</dd></div>
+    <div><dt>Best for</dt><dd>Homeowners, property managers &amp; contractors</dd></div>
+    <div><dt>Spanish</dt><dd>Hablamos espa&ntilde;ol</dd></div>
+  </dl>
+</section>

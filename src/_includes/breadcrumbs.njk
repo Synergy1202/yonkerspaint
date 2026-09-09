@@ -1,0 +1,18 @@
+{#- Visible counterpart to the BreadcrumbList schema that structured-data.njk
+    already emits. Rendered when a page defines `crumbs` in its front matter:
+    a list of {label, url}, last item being the current page. -#}
+{%- if crumbs and crumbs.length %}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    {%- for c in crumbs %}
+    <li>
+      {%- if loop.last %}
+      <span aria-current="page">{{ c.label | safe }}</span>
+      {%- else %}
+      <a href="{{ c.url }}">{{ c.label | safe }}</a>
+      {%- endif %}
+    </li>
+    {%- endfor %}
+  </ol>
+</nav>
+{%- endif %}

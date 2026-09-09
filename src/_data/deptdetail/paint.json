@@ -1,0 +1,122 @@
+{
+ "h1": "Paint &amp; Finishing Department",
+ "sidebar": [
+  {
+   "id": "interior",
+   "label": "Interior Paint"
+  },
+  {
+   "id": "exterior",
+   "label": "Exterior Paint"
+  },
+  {
+   "id": "primers",
+   "label": "Primers &amp; Sealers"
+  },
+  {
+   "id": "stain",
+   "label": "Stains &amp; Poly"
+  },
+  {
+   "id": "sundries",
+   "label": "Brushes &amp; Sundries"
+  },
+  {
+   "id": "match",
+   "label": "Color Matching Service"
+  }
+ ],
+ "sections": [
+  {
+   "id": "interior",
+   "heading": "Interior Paint",
+   "intro": "Rich color, washability and low-odor formulas for every room.",
+   "bullets": [
+    "Benjamin Moore Regal® Select – matte, eggshell, pearl, semi-gloss",
+    "ben® Interior – budget-friendly, zero-VOC",
+    "Aura® Bath &amp; Spa – mildew-resistant matte",
+    "Paint-and-primer combos in <em>over 3,500 colors</em>"
+   ],
+   "image": "dept-paint-advance-cans-01.webp"
+  },
+  {
+   "id": "exterior",
+   "heading": "Exterior Paint",
+   "intro": "Fade-resistant coverage that stands up to Northeast winters.",
+   "bullets": [
+    "Aura® Exterior – self-priming, lifetime warranty",
+    "ben® Exterior – classic acrylic protection",
+    "Fresh-start bonding primers for wood, PVC &amp; metal",
+    "Flex Seal® liquid rubber for roof &amp; foundation patch"
+   ]
+  },
+  {
+   "id": "primers",
+   "heading": "Primers &amp; Sealers",
+   "intro": "Proper prep equals pro results.",
+   "bullets": [
+    "Fresh Start® high-hide latex &amp; oil primers",
+    "Zinsser BIN® shellac for smoke &amp; tannins",
+    "STIX® bonding primer for glossy surfaces",
+    "Drywall sealers and masonry block fillers"
+   ],
+   "image": "dept-paint-primer-shelf-01.webp"
+  },
+  {
+   "id": "stain",
+   "heading": "Stains, Poly &amp; Specialty Coatings",
+   "intro": "Show off the grain — inside or out.",
+   "bullets": [
+    "Minwax® penetrating stain, wipe-on poly &amp; fast-dry varnish",
+    "Benjamin Moore Arborcoat® deck &amp; siding stains",
+    "Watco® teak &amp; Danish oils",
+    "Concrete &amp; garage floor epoxy kits"
+   ],
+   "image": "dept-paint-stain-display-01.webp"
+  },
+  {
+   "id": "sundries",
+   "heading": "Brushes, Rollers &amp; Prep Sundries",
+   "intro": "Quality applicators make the job faster and the finish smoother.",
+   "bullets": [
+    "Purdy® &amp; Wooster® brushes, frames &amp; WhiteDove rollers",
+    "Gorilla® &amp; 3M® painter’s tapes, drop cloths &amp; plastic",
+    "Gator® &amp; Norton® sandpaper sheets, sponges &amp; discs",
+    "Caulks &amp; sealants: Alex Plus®, GE Silicone, Dynaflex 230"
+   ],
+   "image": "dept-paint-spray-01.webp"
+  },
+  {
+   "id": "match",
+   "heading": "Precision Color Matching",
+   "intro": "Bring a paint chip, pillow, siding sample — even a broken tile — and we’ll scan it with our Benjamin Moore spectro-photometer.",
+   "bullets": [
+    "Computerized tinting to 0.01-gram accuracy",
+    "Sample pints mixed while you wait",
+    "Records saved for easy re-orders"
+   ],
+   "image": "dept-paint-color-wall-03.webp",
+   "callout": {
+    "heading": "Ready to start painting?",
+    "text": "Call us at {{PHONE}} or stop by today.",
+    "linkUrl": "/contact.html",
+    "linkLabel": "Get Directions"
+   }
+  }
+ ],
+ "intro": "Our paint department carries Benjamin Moore interior and exterior paint, primers, stains and clear finishes, along with the brushes, rollers, tape, sandpaper and caulk that go with them &mdash; and we mix colour at the counter while you wait. Interior and exterior paints are built for different problems: interior formulas are tuned for scrub resistance and low odour in a closed room, while exterior formulas trade some hardness for flexibility so the film can expand and contract through a Northeast winter without cracking. Primer does the half of the job nobody sees. It blocks stains bleeding through, gives glossy or chalky surfaces something to grip, and evens out how much the wall drinks, so the topcoat covers in fewer passes. If you are matching a colour you already have, bring a flat sample at least an inch square for <a href=\"/services.html#paint-color-matching\">colour matching</a>.",
+ "faqs": [
+  {
+   "q": "How does paint colour matching actually work?",
+   "a": "A spectrophotometer shines light on your sample and measures how much of each wavelength bounces back. That reading becomes a set of coordinates, and software works out which colourants, and how much of each, will land a tint base on the same spot. It is arithmetic, not eyeballing, which is why a chip, a pillow or a piece of siding can all be read. We scan on a Benjamin Moore spectrophotometer and keep the formula on file so a re-order matches the first batch."
+  },
+  {
+   "q": "How big does my sample need to be?",
+   "a": "A flat sample at least one inch square &mdash; larger than a quarter &mdash; gives the most accurate reading. Bigger and flatter is better: the instrument averages across the area it sees, so a curved, glossy or dirty surface can skew the result. A clean, matte, flat piece reads best."
+  },
+  {
+   "q": "Do I really need to prime?",
+   "a": "It depends on what is underneath. Bare drywall, bare wood, masonry and anything patched will drink topcoat unevenly without a primer. Glossy surfaces need a bonding primer so the new film has something to hold onto. Water stains, smoke and tannin-rich woods need a stain-blocking primer or they will bleed through, sometimes weeks later. Repainting a sound, similar-coloured wall in the same sheen is the usual case where you can skip it. The <a href=\"/guides/interior-painting-prep.html\">painting prep guide</a> sets out the order of work."
+  }
+ ]
+}

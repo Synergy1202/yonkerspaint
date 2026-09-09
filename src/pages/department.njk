@@ -1,0 +1,209 @@
+---
+pagination:
+  data: departments
+  size: 1
+  alias: dept
+  addAllPagesToCollections: true
+permalink: "{{ dept.url }}"
+pageType: "department"
+bodyClass: "department-detail-page"
+noCta: true
+eleventyComputed:
+  title: "{{ dept.seoTitle | safe }} | {{ site.name | safe }}"
+  description: "{{ dept.seoDescription | safe }}"
+  ogImageFile: "{{ dept.images[0] if dept.images.length else 'og-default.jpg' }}"
+  crumbs:
+    - label: "Home"
+      url: "/index.html"
+    - label: "Departments"
+      url: "/departments.html"
+    - label: "{{ dept.name | safe }}"
+---
+{%- from "img.njk" import img -%}
+{%- set detail = deptdetail[dept.slug] -%}
+{%- set heroKey = dept.images[0] if dept.images.length else false -%}
+
+{% if heroKey %}
+<section class="hero hero--photo hero--inner inner-hero inner-hero--department department-showroom-hero" style="background-image:url('/images/{{ heroKey }}')">
+  <div class="department-showroom-hero__panel">
+    <p class="eyebrow">Yonkers Paint &amp; Hardware · {{ dept.navName | safe }}</p>
+    <h1>{{ detail.h1 | safe }} in Yonkers, NY</h1>
+    <p class="department-hero-lede">{{ dept.blurb | safe }} Get practical help at the counter and see the full in-store selection at 65 Main Street in Getty Square.</p>
+    <div class="department-showroom-hero__actions">
+      <a class="btn" href="#departmentSelection">Explore {{ dept.navName | safe }}</a>
+      <a class="btn btn-ghost" href="tel:{{ site.phone.tel }}">Call {{ site.phone.display }}</a>
+    </div>
+  </div>
+</section>
+{% else %}
+<section class="hero hero--flat hero--inner inner-hero inner-hero--flat inner-hero--department department-showroom-hero department-showroom-hero--flat">
+  <div class="department-showroom-hero__panel">
+    <p class="eyebrow">Yonkers Paint &amp; Hardware · {{ dept.navName | safe }}</p>
+    <h1>{{ detail.h1 | safe }} in Yonkers, NY</h1>
+    <p class="department-hero-lede">{{ dept.blurb | safe }} Visit our 65 Main Street store in downtown Yonkers for the full in-store selection and practical help at the counter.</p>
+    <div class="department-showroom-hero__actions">
+      <a class="btn" href="#departmentSelection">Explore {{ dept.navName | safe }}</a>
+      <a class="btn btn-ghost" href="tel:{{ site.phone.tel }}">Call {{ site.phone.display }}</a>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="department-overview" aria-labelledby="departmentOverviewHeading">
+  <div class="department-overview__copy">
+    <p class="section-kicker">In-store department</p>
+    <h2 id="departmentOverviewHeading">The right supplies, with help when the details matter.</h2>
+    {%- if detail.intro %}
+    <p class="dept-intro">{{ detail.intro | safe }}</p>
+    {%- endif %}
+  </div>
+  <dl class="department-overview__facts" aria-label="Store information">
+    <div><dt>Department</dt><dd>{{ dept.name | safe }}</dd></div>
+    <div><dt>Store</dt><dd>65 Main Street · Getty Square</dd></div>
+    <div><dt>Questions?</dt><dd><a href="tel:{{ site.phone.tel }}">Call {{ site.phone.display }}</a></dd></div>
+  </dl>
+</section>
+
+<div id="departmentSelection" class="dept-wrapper">
+
+  <aside class="sidebar" aria-label="On this page">
+    <p class="sidebar-kicker">Browse this department</p>
+    <h2>Jump to</h2>
+    <ul>
+      {%- for s in detail.sidebar %}
+      <li><a href="#{{ s.id }}">{{ s.label | safe }}</a></li>
+      {%- endfor %}
+      {%- if detail.faqs and detail.faqs.length %}<li><a href="#deptFaqHeading">Questions</a></li>{% endif %}
+      <li><a href="#relatedHeading">Related</a></li>
+    </ul>
+  </aside>
+
+  <div class="department-detail-content">
+    <div class="dept-sections">
+      {%- for s in detail.sections %}
+      <section id="{{ s.id }}" class="dept-section" aria-labelledby="{{ s.id }}-h">
+        <div class="dept-section-media">
+          {{ img(s.image, imagemeta, false, "lazy", "wide", derivatives) }}
+        </div>
+        <div class="section-content">
+          <p class="dept-section-kicker">{{ dept.navName | safe }} · In-store selection</p>
+          <h2 id="{{ s.id }}-h">{{ s.heading | safe }}</h2>
+          {%- if s.intro %}<p class="dept-section-intro">{{ s.intro | safe }}</p>{% endif %}
+          <ul class="dept-product-list">
+            {%- for b in s.bullets %}
+            <li>{{ b | safe }}</li>
+            {%- endfor %}
+          </ul>
+
+          {%- if s.callout %}
+          <div class="callout department-callout">
+            <p class="callout-kicker">Good to know</p>
+            <h2>{{ s.callout.heading | safe }}</h2>
+            <p>{{ s.callout.text | replace("{{PHONE}}", '<a href="tel:' + site.phone.tel + '">' + site.phone.display + '</a>') | safe }}</p>
+            <a class="btn btn-light" href="{{ s.callout.linkUrl }}">{{ s.callout.linkLabel | safe }} &raquo;</a>
+          </div>
+          {%- endif %}
+        </div>
+      </section>
+      {%- endfor %}
+    </div>
+
+    {%- if detail.faqs and detail.faqs.length %}
+    <section class="dept-faq" aria-labelledby="deptFaqHeading">
+      <div class="dept-faq-heading">
+        <p class="section-kicker">Before you stop in</p>
+        <h2 id="deptFaqHeading">Common {{ dept.navName | safe }} questions in Yonkers</h2>
+        <p>Quick answers to common questions about this department. For a specific product, size, finish or part, call the store before making the trip.</p>
+      </div>
+      <div class="dept-faq-list">
+        {%- for item in detail.faqs %}
+        <details>
+          <summary>{{ item.q | safe }}</summary>
+          <p>{{ item.a | safe }}</p>
+        </details>
+        {%- endfor %}
+      </div>
+    </section>
+    {%- endif %}
+
+    <nav class="related department-related" aria-labelledby="relatedHeading">
+      <div class="department-related__heading">
+        <p class="section-kicker">Keep the project moving</p>
+        <h2 id="relatedHeading">Related departments, guides &amp; services</h2>
+        <p>Continue with nearby product categories, practical guides and in-store services that may help with the same job.</p>
+      </div>
+
+      <div class="department-related__groups">
+        {%- if dept.related and dept.related.length %}
+        <section class="department-related__group" aria-labelledby="relatedDepartmentsHeading">
+          <h3 id="relatedDepartmentsHeading">Related departments</h3>
+          <ul class="related-list">
+            {%- for slug in dept.related %}
+            {%- set r = departments | findBy("slug", slug) %}
+            {%- if r %}
+            <li>
+              <a href="{{ r.url }}">{{ r.name }}</a>
+              <span>{{ r.seoDescription }}</span>
+            </li>
+            {%- endif %}
+            {%- endfor %}
+          </ul>
+        </section>
+        {%- endif %}
+
+        {%- if dept.relatedGuides and dept.relatedGuides.length %}
+        <section class="department-related__group" aria-labelledby="relatedGuidesHeading">
+          <h3 id="relatedGuidesHeading">Helpful guides</h3>
+          <ul class="related-list">
+            {%- for gslug in dept.relatedGuides %}
+            {%- set g = collections.guides | findBy("data.slug", gslug) %}
+            {%- if g %}
+            <li>
+              <a href="{{ g.url }}">{{ g.data.shortTitle }} guide</a>
+              <span>{{ g.data.lede }}</span>
+            </li>
+            {%- endif %}
+            {%- endfor %}
+          </ul>
+        </section>
+        {%- endif %}
+
+        {%- if dept.relatedServices and dept.relatedServices.length %}
+        <section class="department-related__group" aria-labelledby="relatedServicesHeading">
+          <h3 id="relatedServicesHeading">In-store services</h3>
+          <ul class="related-list">
+            {%- for id in dept.relatedServices %}
+            {%- set sv = services | findBy("id", id) %}
+            {%- if sv %}
+            <li>
+              <a href="/services.html#{{ sv.id }}">{{ sv.name | safe }}</a>
+              <span>In-store service. {{ sv.bullets[0] | safe }}.</span>
+            </li>
+            {%- endif %}
+            {%- endfor %}
+          </ul>
+        </section>
+        {%- endif %}
+      </div>
+    </nav>
+  </div>
+
+</div>
+
+<section class="department-store-cta" aria-labelledby="departmentStoreCtaHeading">
+  <div class="department-store-cta__copy">
+    <p class="section-kicker">Need help choosing?</p>
+    <h2 id="departmentStoreCtaHeading">Bring the project list. We’ll help with the next step.</h2>
+    <p>Visit Yonkers Paint &amp; Hardware at 65 Main Street in Getty Square for {{ dept.navName | safe }} supplies and practical help at the counter. If you need something specific, call before you make the trip.</p>
+    <div class="department-store-cta__actions">
+      <a class="btn" href="tel:{{ site.phone.tel }}">Call {{ site.phone.display }}</a>
+      <a class="btn btn-ghost" href="{{ site.map.link }}" target="_blank" rel="noopener">Get directions</a>
+      <a class="department-store-cta__link" href="/departments.html">View all departments <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </div>
+  <div class="department-store-cta__badge" aria-label="Store location">
+    <span>Yonkers Paint &amp; Hardware</span>
+    <strong>65 Main Street</strong>
+    <small>Getty Square · Downtown Yonkers</small>
+  </div>
+</section>

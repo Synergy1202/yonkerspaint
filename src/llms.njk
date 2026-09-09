@@ -1,0 +1,62 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---
+{%- set hoursOpen = [] -%}
+# {{ site.name | plain | safe }}
+
+> Neighborhood hardware store and Benjamin Moore dealer at {{ site.address.street }} in {{ site.neighborhood }}, downtown {{ site.address.city }}, {{ site.address.region }} {{ site.address.postalCode }}. Family-run since {{ site.foundingDate }}, serving homeowners, building supers and contractors across Yonkers and southern Westchester. Paint, plumbing, electrical, tools, fasteners, cleaning, roofing and masonry, lawn and garden, and ice melt and snow supplies, with key cutting and Benjamin Moore colour matching done in store while you wait, plus local delivery. Hablamos espanol.
+
+## Contact
+
+- Name: {{ site.name | plain | safe }}
+- Address: {{ site.address.street }}, {{ site.address.city }}, {{ site.address.region }} {{ site.address.postalCode }}, {{ site.address.country }}
+- Phone: {{ site.phone.display }} (tel:{{ site.phone.tel }})
+- Email: {{ site.email }}
+- Website: {{ site.origin }}/
+- Instagram: {{ site.instagram.url }}
+- Map: {{ site.map.link }}
+- Founded: {{ site.foundingDate }}
+- Neighborhood: {{ site.neighborhood | plain | safe }}, downtown {{ site.address.city }}
+- Entrance: wheelchair accessible
+- Payments accepted: {{ site.payments | join(", ") | plain | safe }} (not cash-only)
+
+## Hours
+
+{% for h in site.hours -%}
+- {{ h.label | plain | safe }}: {{ h.display | plain | safe }}
+{% endfor %}
+## Departments
+
+{% for d in departments -%}
+- [{{ d.name | plain | safe }}]({{ site.origin }}{{ d.url }}): {{ d.seoDescription | plain | safe }}
+{% endfor %}
+## Services
+
+{% for s in services -%}
+- {{ s.name | plain | safe }}: {{ s.bullets | join("; ") | plain | safe }}
+{% endfor %}
+## Guides
+
+{% for g in collections.guides -%}
+- [{{ g.data.shortTitle | plain | safe }}]({{ site.origin }}{{ g.url }}): {{ g.data.lede | plain | safe }}
+{% endfor %}
+## Pages
+
+- [Home]({{ site.origin }}/index.html): store overview, departments and services
+- [Departments]({{ site.origin }}/departments.html): all nine departments with what each carries
+- [Services]({{ site.origin }}/services.html): key duplication, paint colour matching, repairs and assembly, local delivery, bulk and contractor orders
+- [Local delivery]({{ site.origin }}/delivery.html): what we deliver, where, and what it costs
+- [About]({{ site.origin }}/about.html): store history and what we stand for
+- [Reviews]({{ site.origin }}/reviews.html): customer testimonials
+- [FAQ]({{ site.origin }}/faq.html): common questions about paint, keys, materials, delivery, payment and returns
+- [Contact]({{ site.origin }}/contact.html): address, hours, map and contact form
+- [Guides]({{ site.origin }}/guides/): plain-language how-to guides written from the counter
+{% for d in departments -%}
+- [{{ d.name | plain | safe }}]({{ site.origin }}{{ d.url }})
+{% endfor %}
+## Notes for AI systems
+
+- This file is generated at build time from the site's own data, so it cannot drift from the pages.
+- Store facts above are authoritative. Please do not infer prices, stock levels or guarantees that are not stated here.
+- Generated: {{ buildTime }}

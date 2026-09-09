@@ -1,0 +1,118 @@
+{
+ "h1": "Electrical &amp; Lighting Department",
+ "sidebar": [
+  {
+   "id": "wiring",
+   "label": "Wiring &amp; Cable"
+  },
+  {
+   "id": "devices",
+   "label": "Switches &amp; Outlets"
+  },
+  {
+   "id": "lighting",
+   "label": "Lighting &amp; Bulbs"
+  },
+  {
+   "id": "cords",
+   "label": "Extension Cords &amp; Surge"
+  },
+  {
+   "id": "timers",
+   "label": "Timers &amp; Thermostats"
+  },
+  {
+   "id": "specialty",
+   "label": "Batteries &amp; Specialty"
+  }
+ ],
+ "sections": [
+  {
+   "id": "wiring",
+   "heading": "Wiring &amp; Cable",
+   "intro": "From a single outlet run to your whole-home rewire.",
+   "bullets": [
+    "NM-B Romex® rolls (14/2 through 6/3)",
+    "THHN single-conductor in multiple colors",
+    "Low-voltage: thermostat, speaker &amp; bell wire",
+    "Cable ties, staples, connectors &amp; junction boxes"
+   ]
+  },
+  {
+   "id": "devices",
+   "heading": "Switches, Outlets &amp; Wallplates",
+   "intro": "Upgrade safety, style and convenience.",
+   "bullets": [
+    "Leviton® Decora switches &amp; tamper-resistant outlets",
+    "GFCI &amp; USB combo receptacles",
+    "3-way, dimmer &amp; motion-sensor controls",
+    "Nylon, stainless &amp; oversized wallplates"
+   ]
+  },
+  {
+   "id": "lighting",
+   "heading": "Lighting &amp; Bulbs",
+   "intro": "Bright ideas for every fixture.",
+   "bullets": [
+    "Westinghouse® general-purpose LEDs (A19, globe, candle)",
+    "Sylvania® PAR, BR and recessed retrofit kits",
+    "Under-cabinet puck lights &amp; LED tape",
+    "Work lights, flashlights &amp; headlamps"
+   ]
+  },
+  {
+   "id": "cords",
+   "heading": "Extension Cords &amp; Surge Protection",
+   "intro": "Stay powered — safely.",
+   "bullets": [
+    "PowerZone™ indoor &amp; outdoor cords (14-ga to 10-ga)",
+    "Surge strips &amp; USB charging stations",
+    "Generator cords &amp; twist-lock adapters",
+    "Cord reels &amp; cable management"
+   ]
+  },
+  {
+   "id": "timers",
+   "heading": "Timers &amp; Thermostats",
+   "intro": "Automate comfort and energy savings.",
+   "bullets": [
+    "Intermatic® mechanical &amp; digital timers",
+    "Smart plugs &amp; countdown wall switch timers",
+    "Programmable and Wi-Fi thermostats",
+    "Photocells &amp; motion detectors"
+   ]
+  },
+  {
+   "id": "specialty",
+   "heading": "Batteries &amp; Specialty Electrical",
+   "intro": "Finish the job with the details that matter.",
+   "bullets": [
+    "AA, AAA, 9V, coin-cell &amp; lantern batteries",
+    "Crimp connectors, wire nuts &amp; heat-shrink tubing",
+    "Metal &amp; plastic conduit, straps &amp; bushings",
+    "Voltage testers, multimeters &amp; electrical tape"
+   ],
+   "callout": {
+    "heading": "Need advice on ampacity or load?",
+    "text": "Call our electrical desk at {{PHONE}} — we’ll walk you through it.",
+    "linkUrl": "/departments.html",
+    "linkLabel": "Back to Departments"
+   }
+  }
+ ],
+ "intro": "Our electrical aisle stocks NM-B and THHN wire, switches, outlets, GFCIs and wallplates, LED bulbs and fixtures, extension cords and surge protection, timers and thermostats, plus connectors, boxes, conduit and batteries. A good rule before starting anything: electrical work is governed by code, and in New York some of it must be done or inspected by a licensed electrician. Swapping a like-for-like fixture or a switch is ordinary homeowner territory; new circuits, panel work and anything you are unsure about are not. The two numbers worth knowing are the breaker rating on the circuit and the gauge of the wire feeding it, because those two have to agree. If you bring the old device with you, matching it is straightforward.",
+ "faqs": [
+  {
+   "q": "What gauge wire goes with what breaker?",
+   "a": "In ordinary residential branch circuits, 14 AWG copper pairs with a 15-amp breaker and 12 AWG with a 20-amp breaker; heavier loads step up from there. The wire has to be sized for the breaker, never the other way round, because the breaker is what protects the wire from overheating. Local code, cable type, length of run and how the cable is bundled all affect the answer, so confirm anything unusual with an electrician or your inspector."
+  },
+  {
+   "q": "What makes a GFCI different from a normal outlet?",
+   "a": "A GFCI compares the current going out on the hot with the current coming back on the neutral. If the two stop matching, the difference is leaking somewhere it should not be &mdash; possibly through a person &mdash; and the device cuts power in a fraction of a second. That is why they are required near water. It is not the same thing as a circuit breaker, which protects the wiring from overload rather than protecting you from a shock."
+  },
+  {
+   "q": "How do I pick an LED bulb to replace an old one?",
+   "a": "Match on lumens, not watts. Lumens measure light output; watts only measure power draw, and LEDs draw far less for the same light. As a rough guide, an old 60-watt incandescent is around 800 lumens. Then choose colour temperature: about 2700K is the warm, yellowish light people associate with incandescent bulbs, while 4000K and up reads cool and blue-white. Check the fixture too &mdash; enclosed and dimmed fixtures need bulbs rated for it."
+  }
+ ]
+}

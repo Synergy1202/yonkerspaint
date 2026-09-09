@@ -1,0 +1,57 @@
+---
+title: "Hardware Store FAQ — Keys, Paint, Delivery & Returns | Yonkers Paint & Hardware"
+description: "Answers to common questions about Yonkers Paint & Hardware — delivery, returns, key cutting, color matching, payment options and more."
+ogTitle: "FAQ | Yonkers Paint & Hardware"
+ogDescription: "Delivery, returns, key cutting, color matching, payment options and more."
+pageType: "faq"
+bodyClass: "faq-page"
+noCta: true
+---
+<section class="faq-showroom-hero">
+  <div class="faq-showroom-hero__inner">
+    <p class="eyebrow">Before you visit &bull; Yonkers, NY</p>
+    <h1>Hardware Store FAQ for Yonkers Customers</h1>
+    <p>Quick answers about key cutting, paint color matching, delivery, returns, payment options and visiting Yonkers Paint &amp; Hardware.</p>
+    <div class="faq-showroom-hero__actions">
+      <a class="btn" href="#faq-questions">Browse Questions</a>
+      <a class="btn btn-ghost" href="tel:{{ site.phone.tel }}">Call the Store</a>
+    </div>
+  </div>
+</section>
+
+<section class="faq-intro" aria-labelledby="faqIntroHeading">
+  <p class="section-kicker">Practical answers</p>
+  <h2 id="faqIntroHeading">Start here before you call or come in.</h2>
+  <p>These are the questions customers ask most often about shopping, services and visiting the store. If your project is more specific, call the counter and we can help you figure out the next step.</p>
+</section>
+
+<div class="faq-main faq-premium" id="faq-questions">
+  {%- for g in faqs %}
+  <section class="faq-group" id="{{ g.id }}" aria-labelledby="{{ g.id }}-h">
+    <div class="faq-group__head">
+      <span>{{ loop.index }}</span>
+      <h2 id="{{ g.id }}-h">{{ g.heading | safe }}</h2>
+    </div>
+    <div class="faq-group__questions">
+      {%- for item in g.items %}
+      <details>
+        <summary>{{ item.q | safe }}</summary>
+        <p>{{ item.a | safe }}</p>
+      </details>
+      {%- endfor %}
+    </div>
+  </section>
+  {%- endfor %}
+</div>
+
+<section class="faq-help" aria-labelledby="faqHelpHeading">
+  <div>
+    <p class="section-kicker">Still not sure?</p>
+    <h2 id="faqHelpHeading">Ask the counter.</h2>
+    <p>Call us or visit {{ site.address.street }} in Getty Square for help with a product, service or project question.</p>
+  </div>
+  <div class="faq-help__actions">
+    <a class="btn" href="tel:{{ site.phone.tel }}">Call {{ site.phone.display }}</a>
+    <a class="btn btn-ghost" href="{{ site.map.link }}" target="_blank" rel="noopener">Get Directions</a>
+  </div>
+</section>

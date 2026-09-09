@@ -1,0 +1,42 @@
+{
+  "homeGallery": [
+    {
+      "image": "dept-paint-color-center-01.webp",
+      "variant": "card",
+      "caption": "The Benjamin Moore colour centre, where matching starts."
+    },
+    {
+      "image": "interior-aisle-numbered-01.webp",
+      "variant": "card",
+      "caption": "Numbered aisles, so you can find it or we can point you at it."
+    },
+    {
+      "image": "service-key-blanks-01.webp",
+      "variant": "card",
+      "caption": "The key wall: house, office and padlock blanks."
+    },
+    {
+      "image": "dept-paint-regal-cans-01.webp",
+      "variant": "card",
+      "caption": "Benjamin Moore Regal Select on the shelf."
+    }
+  ],
+  "aboutFigures": [
+    {
+      "image": "storefront-exterior-01.webp",
+      "variant": "wide",
+      "caption": "65 Main Street, Yonkers."
+    },
+    {
+      "image": "interior-aisle-01.webp",
+      "variant": "wide",
+      "caption": "Inside: aisles stocked front to back."
+    },
+    {
+      "image": "brand-benjamin-moore-sign-01.webp",
+      "variant": "wide",
+      "caption": "A Benjamin Moore dealer."
+    }
+  ],
+  "contactFigure": []
+}

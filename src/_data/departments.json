@@ -1,0 +1,287 @@
+[
+ {
+  "slug": "paint",
+  "name": "Paint & Finishing",
+  "navName": "Paint & Finishing",
+  "anchor": "paint",
+  "url": "/paint.html",
+  "blurb": "Top-tier coatings and all the supplies to put them on right:",
+  "points": [
+   "Benjamin Moore® Regal, ben &amp; Element Guard",
+   "Primers, stains, poly &amp; Flex Seal® roof coatings",
+   "Painters’ tape, rollers, brushes &amp; sanding",
+   "Color matching – spectro-matched while you wait"
+  ],
+  "cta": "See paint tips",
+  "images": [
+   "dept-paint-color-wall-03.webp",
+   "dept-paint-color-center-01.webp",
+   "dept-paint-aisle-01.webp",
+   "dept-paint-advance-cans-01.webp",
+   "dept-paint-regal-cans-01.webp",
+   "dept-paint-primer-shelf-01.webp",
+   "dept-paint-spray-01.webp",
+   "dept-paint-stain-display-01.webp"
+  ],
+  "seoTitle": "Paint Store in Yonkers, NY",
+  "seoDescription": "Benjamin Moore paint, primers, stains and finishing sundries, with colour matching while you wait. 65 Main Street, Yonkers.",
+  "related": [
+   "tools",
+   "cleaning",
+   "roofing"
+  ],
+  "relatedServices": [
+   "paint-color-matching"
+  ],
+  "relatedGuides": [
+   "paint-sheen-guide",
+   "interior-painting-prep"
+  ]
+ },
+ {
+  "slug": "plumbing",
+  "name": "Plumbing & Pumps",
+  "navName": "Plumbing & Pumps",
+  "anchor": "plumbing",
+  "url": "/plumbing.html",
+  "blurb": "From a leaky sink to a new water-heater install:",
+  "points": [
+   "SharkBite® push-to-connect &amp; PEX tubing",
+   "Brass valves, PVC, ABS &amp; copper fittings",
+   "Pipe threading (black &amp; galvanized) while you wait",
+   "Sump, utility &amp; condensate pumps"
+  ],
+  "cta": "Plumbing guide",
+  "images": [
+   "dept-plumbing-traps-01.webp",
+   "dept-plumbing-cements-01.webp"
+  ],
+  "seoTitle": "Plumbing Supplies in Yonkers, NY",
+  "seoDescription": "SharkBite fittings, copper and PEX, brass valves, drain parts and sump pumps, plus pipe threading while you wait.",
+  "related": [
+   "fasteners",
+   "tools",
+   "roofing"
+  ],
+  "relatedServices": [
+   "bulk-contractor"
+  ],
+  "relatedGuides": []
+ },
+ {
+  "slug": "electrical",
+  "name": "Electrical & Lighting",
+  "navName": "Electrical & Lighting",
+  "anchor": "electrical",
+  "url": "/electrical.html",
+  "blurb": "Quality components to keep homes safe and bright:",
+  "points": [
+   "Outlets, switches, GFCIs &amp; smart dimmers",
+   "LED floodlights, shop lights &amp; retrofit bulbs",
+   "Bulk Romex® wire, extension cords &amp; cable ties",
+   "Thermostats, timers &amp; surge protection"
+  ],
+  "cta": "More on electrical",
+  "images": [],
+  "seoTitle": "Electrical Supplies in Yonkers, NY",
+  "seoDescription": "Romex and THHN wire, Leviton switches and outlets, LED bulbs, extension cords, timers and thermostats.",
+  "related": [
+   "tools",
+   "fasteners"
+  ],
+  "relatedServices": [
+   "repairs-assembly"
+  ],
+  "relatedGuides": []
+ },
+ {
+  "slug": "tools",
+  "name": "Tools & Power Tools",
+  "navName": "Tools & Power Tools",
+  "anchor": "tools",
+  "url": "/tools.html",
+  "blurb": "Everything from weekend DIY to pro jobsite gear:",
+  "points": [
+   "DeWalt® &amp; Milwaukee® cordless kits &amp; batteries",
+   "Hand tools, levels, squares &amp; blades",
+   "Sawzall®, circular &amp; oscillating blades",
+   "Shop-vac, safety gear &amp; jobsite storage"
+  ],
+  "cta": "Shop tools",
+  "images": [
+   "dept-tools-accessories-01.webp",
+   "dept-tools-dewalt-display-01.webp"
+  ],
+  "seoTitle": "Tools & Power Tools in Yonkers, NY",
+  "seoDescription": "Milwaukee and DeWalt cordless kits, hand tools, blades and bits, measuring and layout, safety gear and jobsite storage.",
+  "related": [
+   "fasteners",
+   "paint",
+   "electrical"
+  ],
+  "relatedServices": [
+   "repairs-assembly"
+  ],
+  "relatedGuides": [
+   "wall-anchors"
+  ]
+ },
+ {
+  "slug": "fasteners",
+  "name": "Fasteners & Hardware",
+  "navName": "Fasteners & Hardware",
+  "anchor": "fasteners",
+  "url": "/fasteners.html",
+  "blurb": "By the piece, by the box — metric or imperial.",
+  "points": [
+   "Hillman™ nuts, bolts, screws &amp; anchors",
+   "Gate hardware, cabinet knobs &amp; hinges",
+   "Key blanks &amp; rapid key duplication",
+   "Specialty drawer slides &amp; small parts bins"
+  ],
+  "cta": "Fastener details",
+  "images": [
+   "dept-fasteners-bins-01.webp",
+   "dept-fasteners-wall-01.webp",
+   "dept-fasteners-pegboard-01.webp",
+   "dept-fasteners-pegboard-02.webp",
+   "dept-fasteners-aisle-01.webp",
+   "service-key-cutting-01.webp",
+   "service-key-blanks-01.webp",
+   "service-key-wall-signage-01.webp"
+  ],
+  "seoTitle": "Nuts, Bolts & Fasteners in Yonkers, NY",
+  "seoDescription": "Screws, bolts, anchors and builders hardware sold by the piece or the box, plus key cutting while you wait.",
+  "related": [
+   "tools",
+   "plumbing"
+  ],
+  "relatedServices": [
+   "key-duplication"
+  ],
+  "relatedGuides": [
+   "wall-anchors",
+   "key-types"
+  ]
+ },
+ {
+  "slug": "snow",
+  "name": "Ice-Melt & Snow Supplies",
+  "navName": "Ice-Melt & Snow",
+  "anchor": "snow",
+  "url": "/snow.html",
+  "blurb": "Our biggest winter category &mdash; stocked early, restocked often:",
+  "points": [
+   "50 lb rock-salt &amp; calcium-chloride pellet bags",
+   "Pet-safe blended ice-melt (magnesium / CMA)",
+   "Garant® steel &amp; ABS snow shovels, pushers &amp; ice-choppers",
+   "Roof rakes, snow-brushes, sidewalk spreaders &amp; traction grit"
+  ],
+  "cta": "Winter-supplies guide",
+  "images": [],
+  "seoTitle": "Ice Melt & Snow Supplies in Yonkers, NY",
+  "seoDescription": "Rock salt, calcium chloride and pet-safe ice melt, snow shovels, pushers, roof rakes and spreaders. Pallet pricing available.",
+  "related": [
+   "garden",
+   "roofing",
+   "cleaning"
+  ],
+  "relatedServices": [
+   "local-delivery",
+   "bulk-contractor"
+  ],
+  "relatedGuides": [
+   "choosing-ice-melt"
+  ]
+ },
+ {
+  "slug": "garden",
+  "name": "Seasonal & Garden",
+  "navName": "Seasonal & Garden",
+  "anchor": "seasonal",
+  "url": "/garden.html",
+  "blurb": "Yard, patio and seasonal must-haves:",
+  "points": [
+   "Garant® shovels, rakes, hoes &amp; post-hole diggers",
+   "Hoses, sprinklers, nozzles &amp; hose repair kits",
+   "Ice melt, rock salt &amp; snow shovels (winter)",
+   "Trash cans, compost &amp; lawn care supplies"
+  ],
+  "cta": "Garden center",
+  "images": [],
+  "seoTitle": "Lawn & Garden Supplies in Yonkers, NY",
+  "seoDescription": "Shovels, rakes and hand tools, hoses and sprinklers, lawn and garden care, plus refuse and compost supplies.",
+  "related": [
+   "snow",
+   "cleaning",
+   "tools"
+  ],
+  "relatedServices": [
+   "repairs-assembly"
+  ],
+  "relatedGuides": [
+   "choosing-ice-melt"
+  ]
+ },
+ {
+  "slug": "cleaning",
+  "name": "Cleaning & Jan-San",
+  "navName": "Cleaning & Jan-San",
+  "anchor": "cleaning",
+  "url": "/cleaning.html",
+  "blurb": "From heavy-duty contractor bags to everyday cleaners:",
+  "points": [
+   "Husky® contractor &amp; kitchen trash bags",
+   "O-Cedar® mops, brooms, buckets &amp; refills",
+   "All-purpose cleaners, bleach &amp; degreasers",
+   "WD-40® multi-use &amp; specialty lubricants"
+  ],
+  "cta": "Cleaning aisle",
+  "images": [
+   "dept-cleaning-aisle-01.webp",
+   "dept-cleaning-aisle-02.webp",
+   "dept-cleaning-brooms-01.webp"
+  ],
+  "seoTitle": "Cleaning & Janitorial Supplies in Yonkers, NY",
+  "seoDescription": "Contractor trash bags, mops and brooms, household and industrial cleaners, WD-40 aerosols and paper goods.",
+  "related": [
+   "garden",
+   "paint"
+  ],
+  "relatedServices": [
+   "bulk-contractor"
+  ],
+  "relatedGuides": []
+ },
+ {
+  "slug": "roofing",
+  "name": "Roofing & Masonry",
+  "navName": "Roofing & Masonry",
+  "anchor": "roofing",
+  "url": "/roofing.html",
+  "blurb": "Patch, seal, pour and build:",
+  "points": [
+   "Henry® roof cements &amp; elastomeric coatings",
+   "Quikrete® concrete, mortar, sand &amp; hydraulic cement",
+   "Structo-Lite® plaster &amp; VersaBond thin-set",
+   "Roof felt, drip-edge, masonry tools &amp; trowels"
+  ],
+  "cta": "Roof &amp; masonry tips",
+  "images": [
+   "dept-roofing-cement-01.webp",
+   "dept-roofing-coatings-01.webp"
+  ],
+  "seoTitle": "Roofing & Masonry Supplies in Yonkers, NY",
+  "seoDescription": "Roof cements and coatings, leak repair and flashing, Quikrete concrete and mortar, thin-set and masonry tools.",
+  "related": [
+   "paint",
+   "plumbing",
+   "tools"
+  ],
+  "relatedServices": [
+   "local-delivery",
+   "bulk-contractor"
+  ],
+  "relatedGuides": []
+ }
+]

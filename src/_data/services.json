@@ -1,0 +1,115 @@
+[
+ {
+  "id": "key-duplication",
+  "name": "Key Duplication",
+  "badge": "2-Min",
+  "bullets": [
+   "House, office &amp; most padlock keys cut while you wait",
+   "Colored, contractor &amp; novelty blanks stocked",
+   "Chip-less auto &amp; motorcycle blanks available",
+   "Re-keying of Kwikset &amp; Schlage cylinders"
+  ],
+  "note": "<strong>From&nbsp;$2&nbsp;per key</strong> (as of 2026)",
+  "relatedDepartments": [
+   "fasteners"
+  ],
+  "image": "service-key-wall-signage-01.webp",
+  "what": "Cutting a copy means finding a blank with the right profile for your lock, then grinding the depths from your original onto it. Most house, office and padlock keys are the everyday case and take a couple of minutes at the counter.",
+  "when": "When you want a spare before you need one, when a tenant or family member needs their own, or when a key has worn enough that it sticks &mdash; a copy cut from a worn key inherits the wear, so copy from the best original you have.",
+  "bring": "Bring the key itself rather than a photo or a number. If it is stamped &ldquo;do not duplicate&rdquo; or came from a restricted system, the blank may be controlled and we will tell you straight away. Transponder and laser-cut car keys need programming equipment beyond a key machine.",
+  "caption": "The key wall, with the standard-key price posted.",
+  "icon": "key",
+  "relatedGuides": [
+   "key-types"
+  ]
+ },
+ {
+  "id": "paint-color-matching",
+  "name": "Paint Color Matching",
+  "bullets": [
+   "Benjamin Moore&reg; spectro-photometer accuracy to 0.01&nbsp;g",
+   "Match fabric, drywall, siding &ndash; sample &ge; 1&nbsp;in&sup2;",
+   "Formula stored for easy re-orders"
+  ],
+  "noteBadge": "Free&nbsp;with paint purchase",
+  "relatedDepartments": [
+   "paint"
+  ],
+  "image": "dept-paint-color-wall-03.webp",
+  "what": "A spectrophotometer reads your sample, measures how much of each wavelength it reflects, and turns that into a tint recipe for a paint base. It is measurement rather than judgement by eye, which is why a chip, a fabric swatch or a piece of siding can all be read.",
+  "when": "When you are patching a wall and cannot find the original can, when you want to carry a colour from one material to another, or when you are re-ordering and need the second gallon to match the first.",
+  "bring": "Bring a flat sample at least an inch square. Clean, matte and flat reads best &mdash; gloss, curves and dirt all skew the measurement. If you know the original brand and colour name, bring that too; a named formula beats a scan.",
+  "caption": "The Benjamin Moore colour wall the matching draws on.",
+  "icon": "drop",
+  "relatedGuides": [
+   "paint-sheen-guide",
+   "interior-painting-prep"
+  ]
+ },
+ {
+  "id": "repairs-assembly",
+  "name": "General Repairs &amp; Assembly",
+  "bullets": [
+   "Wheelbarrows, hand trucks &amp; small lawn tools",
+   "Minor equipment or furniture assembly",
+   "If it fits in our workshop, we&rsquo;ll take a look"
+  ],
+  "note": "It never hurts to inquire &ndash; call or stop by.",
+  "relatedDepartments": [
+   "tools",
+   "garden"
+  ],
+  "what": "Small bench work on the kind of thing that is not worth a service call: a wheelbarrow that needs a new wheel, a hand truck with a flat, a lawn tool with a broken handle, or a flat-pack item that has defeated its instructions.",
+  "when": "When the part is cheap but the job needs a vice, a press or a second pair of hands. It is worth asking before replacing something outright.",
+  "bring": "Bring the item and any parts that came off it, including the broken ones &mdash; matching a fitting is far easier with the original in hand.",
+  "icon": "wrench",
+  "image": "dept-tools-accessories-01.webp",
+  "caption": "Blades, bits and abrasives in the tool aisle.",
+  "relatedGuides": []
+ },
+ {
+  "id": "local-delivery",
+  "name": "Local Delivery",
+  "badge": "Same-Day",
+  "bullets": [
+   "Paint pails, sheet-rock, lumber, bulk bags &amp; more",
+   "Yonkers, Bronxville, Mt Vernon, Hastings-on-Hudson",
+   "Curb-side or inside-threshold service"
+  ],
+  "note": "Ask us to schedule a drop-off today.",
+  "relatedDepartments": [
+   "roofing",
+   "snow"
+  ],
+  "image": "interior-aisle-01.webp",
+  "what": "A drop-off for the loads that will not fit in a car: paint pails, sheet-rock, lumber and bulk bags. Curb-side or inside-threshold, so you can specify where it lands.",
+  "when": "When the material is heavy, long or awkward, when you are working from a job site rather than a driveway, or when you simply cannot make two trips.",
+  "bring": "Have the delivery address, a contact number and any access details ready &mdash; stairs, a narrow drive, gate codes, or where the truck can legally stop. Say up front if the load has to go inside rather than to the kerb.",
+  "caption": "Stock on the shelves, ready to load out.",
+  "icon": "truck",
+  "relatedGuides": [
+   "choosing-ice-melt"
+  ],
+  "detailUrl": "/delivery.html"
+ },
+ {
+  "id": "bulk-contractor",
+  "name": "Bulk &amp; Contractor Orders",
+  "bullets": [
+   "Pallet pricing on Quikrete&reg;, sheet goods &amp; paint",
+   "Yonkers-certified waste bins &amp; bulk Tuff Bags"
+  ],
+  "note": "Bring your resale/tax form to open an account.",
+  "relatedDepartments": [
+   "roofing",
+   "cleaning"
+  ],
+  "what": "Pallet quantities and account terms for people buying regularly rather than occasionally, on the goods that move in volume: concrete mix, sheet goods and paint.",
+  "when": "When you are ordering repeatedly for a job, when the quantity is large enough that per-unit price matters, or when you need purchases tracked against a business account rather than paid ad hoc.",
+  "bring": "Bring your resale or tax-exempt certificate to open an account. For a price comparison, bring a recent invoice or a written quote rather than a screenshot without terms on it.",
+  "icon": "box",
+  "image": "dept-paint-aisle-01.webp",
+  "caption": "Paint stacked by the case.",
+  "relatedGuides": []
+ }
+]

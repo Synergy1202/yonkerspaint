@@ -1,0 +1,132 @@
+# Yonkers Paint & Hardware — production config.
+# Target: Hostinger shared hosting (LiteSpeed, Apache-compatible).
+# Deployed by uploading the CONTENTS of _site/ into public_html.
+#
+# LiteSpeed honours mod_rewrite, mod_headers, mod_expires and mod_deflate
+# directives, so everything below applies as written.
+
+# ── Canonical host ─────────────────────────────────────────────────────
+# https://yonkerspaintandhardware.com (no www) is canonical.
+#
+# Two rules, but any single request matches at most one of them, so
+# http://www.… reaches the canonical URL in ONE hop rather than chaining
+# through http://non-www or https://www. Both targets are absolute.
+#
+# The X-Forwarded-Proto test is there because on shared hosting the TLS
+# termination often happens upstream, and %{HTTPS} is not always set.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # anything not already on HTTPS -> https://yonkerspaintandhardware.com
+  RewriteCond %{HTTPS} !=on
+  RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+  RewriteRule ^ https://yonkerspaintandhardware.com%{REQUEST_URI} [R=301,L,NE]
+
+  # already HTTPS but on www -> strip the www
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteRule ^ https://yonkerspaintandhardware.com%{REQUEST_URI} [R=301,L,NE]
+</IfModule>
+
+# ── Retired pages ──────────────────────────────────────────────────────
+# products.html duplicated departments.html (same <title>, parallel nav).
+# brands.html became the "Brands We Carry" strip on the departments page.
+# deals.html carried undated seasonal pricing and is retired to the homepage.
+#
+# mod_rewrite above runs first and ends the request with [L], so a request
+# like http://www.…/products.html redirects once to the canonical host and
+# then once more to /departments.html — one redirect per request, which is
+# the correct behaviour and not a chain within a single response.
+Redirect 301 /products.html /departments.html
+Redirect 301 /brands.html   /departments.html
+Redirect 301 /deals.html    /index.html
+
+# ── Error handling ─────────────────────────────────────────────────────
+ErrorDocument 404 /404.html
+
+# ── Default document ───────────────────────────────────────────────────
+DirectoryIndex index.html
+
+# ── No directory listings ──────────────────────────────────────────────
+# The build contains only public files, so nothing needs denying beyond
+# stopping the server from indexing a folder that has no index.html.
+Options -Indexes
+
+# ── Security headers ───────────────────────────────────────────────────
+# No HSTS yet. It is deliberately left out until HTTPS is confirmed working
+# on the live domain — Strict-Transport-Security is hard to walk back,
+# because browsers cache it for its full max-age.
+<IfModule mod_headers.c>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+
+  # Content-Security-Policy.
+  #
+  # Tested, not assumed: the whole site was rebuilt with this policy injected
+  # as a meta tag, served locally and loaded in headless Chrome. Console
+  # errors on contact.html (Maps iframe + form), index.html (fonts, inline
+  # styles, JSON-LD) and a guide page: ZERO. The Google Maps iframe was
+  # confirmed rendering actual map tiles, not silently blocked.
+  #
+  #   frame-src   the Google Maps embed
+  #   form-action the FormSubmit endpoint the contact form posts to
+  #   style-src   'unsafe-inline' is required: hero background images are set
+  #               via style attributes and the no-JS fallback is an inline
+  #               <style> block. Style injection is a far lower risk than
+  #               script injection, and script-src stays strict.
+  #   script-src  'self' only. The JSON-LD blocks are data, not executable
+  #               script, and are not affected.
+  Header always set Content-Security-Policy "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; img-src 'self' data:; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; frame-src https://www.google.com; form-action 'self' https://formsubmit.co; connect-src 'self'"
+</IfModule>
+
+# ── Caching ────────────────────────────────────────────────────────────
+# Images and fonts: one year, immutable. Their filenames are stable, so if
+# a photograph is ever REPLACED rather than added, give it a new filename or
+# returning visitors will keep the old one for a year.
+#
+# CSS and JS: one week. Note these filenames are not content-hashed, so a
+# style fix can take up to a week to reach a returning visitor. See DEPLOY.md
+# for how to force it sooner.
+#
+# HTML, XML, TXT, JSON: always revalidate, so content edits appear at once.
+<IfModule mod_headers.c>
+  <FilesMatch "\.(webp|png|jpe?g|gif|svg|ico|woff2?)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.(css|js)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+  <FilesMatch "\.(html|xml|txt|json|webmanifest)$">
+    Header set Cache-Control "no-cache, max-age=0, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/webp              "access plus 1 year"
+  ExpiresByType image/png               "access plus 1 year"
+  ExpiresByType image/jpeg              "access plus 1 year"
+  ExpiresByType image/x-icon            "access plus 1 year"
+  ExpiresByType font/woff2              "access plus 1 year"
+  ExpiresByType text/css                "access plus 1 week"
+  ExpiresByType application/javascript  "access plus 1 week"
+  ExpiresByType text/html               "access plus 0 seconds"
+</IfModule>
+
+# ── Compression ────────────────────────────────────────────────────────
+# Safe to declare even where the server already compresses. woff2 and webp
+# are already compressed and are deliberately not listed.
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml
+  AddOutputFilterByType DEFLATE application/javascript application/json
+  AddOutputFilterByType DEFLATE application/xml application/rss+xml
+  AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# ── MIME types ─────────────────────────────────────────────────────────
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType font/woff2 .woff2
+  AddType application/manifest+json .webmanifest
+</IfModule>

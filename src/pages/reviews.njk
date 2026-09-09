@@ -1,0 +1,60 @@
+---
+title: "Customer Reviews of Our Yonkers, NY Hardware Store | Yonkers Paint & Hardware"
+description: "See why homeowners and contractors rate Yonkers Paint & Hardware for selection, service and value."
+ogTitle: "Customer Reviews | Yonkers Paint & Hardware"
+ogDescription: "Family-owned since 1966. Read what our customers say."
+bodyClass: "reviews-page"
+noCta: true
+---
+{%- from "icons.njk" import stars -%}
+
+<section class="reviews-showroom-hero">
+  <div class="reviews-showroom-hero__inner">
+    <p class="eyebrow">Customer feedback &bull; Yonkers, NY</p>
+    <h1>What Customers Say About Yonkers Paint &amp; Hardware</h1>
+    <p>Real comments from customers about the service, selection and help they received at our Getty Square hardware store.</p>
+    <a class="btn" href="#customer-reviews">Read Customer Reviews</a>
+  </div>
+</section>
+
+<section class="reviews-proof" aria-label="Review information">
+  <div class="reviews-proof__inner">
+    <div><strong>Real reviews</strong><span>Quoted from the supplied Google review source</span></div>
+    <div><strong>Real names</strong><span>Reviewer display names kept with each quote</span></div>
+    <div><strong>No rewritten praise</strong><span>Customer wording is preserved</span></div>
+  </div>
+</section>
+
+<section class="reviews reviews-premium" id="customer-reviews" aria-label="Customer reviews">
+  <header class="reviews-premium__head">
+    <p class="section-kicker">From our customers</p>
+    <h2>Local feedback, in their own words.</h2>
+    <p>The reviews below are presented as published, with the reviewer&rsquo;s display name and source.</p>
+  </header>
+  <div class="grid">
+    {%- for r in reviews %}
+    <article class="card review-premium-card">
+      <div class="review-premium-card__stars">{{ stars(r.stars) }}</div>
+      <blockquote><p>{{ r.text }}</p></blockquote>
+      <p class="attribution">
+        <span class="attribution-name">{{ r.name }}</span>
+        <span class="attribution-source">{{ r.source }}</span>
+      </p>
+    </article>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="reviews-cta" aria-labelledby="reviewsCtaHeading">
+  <div>
+    <p class="section-kicker">See more customer feedback</p>
+    <h2 id="reviewsCtaHeading">See the full review history on Google.</h2>
+    <p>Use our Google Business Profile to read additional customer reviews or get directions to the store.</p>
+  </div>
+  <div class="reviews-cta__actions">
+    <a class="btn" href="{{ site.map.link }}" target="_blank" rel="noopener">Read Reviews on Google</a>
+    {%- if site.reviewUrl %}
+    <a class="btn btn-ghost" href="{{ site.reviewUrl }}" target="_blank" rel="noopener">Review Us on Google</a>
+    {%- endif %}
+  </div>
+</section>

@@ -1,0 +1,26 @@
+{
+  "name": "yonkerspaintandhardware",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static site for Yonkers Paint & Hardware, 65 Main Street, Yonkers NY. Built with Eleventy, deployed by uploading _site/ to Hostinger.",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "check": "node tools/check-links.js",
+    "check:entity": "node tools/check-entity.js",
+    "check:css": "node tools/css-lint.js",
+    "check:jsonld": "node tools/check-jsonld.js",
+    "check:contrast": "node tools/contrast.js",
+    "check:glyphs": "node tools/check-glyphs.js",
+    "check:nojs": "node tools/check-nojs.js",
+    "check:dist": "node tools/check-dist.js",
+    "deploy:zip": "node tools/make-deploy-zip.js",
+    "review-kit": "node tools/make-review-kit.js",
+    "gbp-export": "node tools/gbp-export.js",
+    "check:all": "npm run check && npm run check:entity && npm run check:css && npm run check:jsonld && npm run check:contrast && npm run check:glyphs && npm run check:nojs && npm run check:dist"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "3.1.6",
+    "qrcode": "^1.5.4"
+  }
+}

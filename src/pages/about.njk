@@ -1,0 +1,105 @@
+---
+title: "About Our Family-Run Hardware Store in Yonkers, NY | Yonkers Paint & Hardware"
+description: "Family-owned since 1966, Yonkers Paint & Hardware has earned the trust of Yonkers & Westchester County with honest service, expert advice, and top brands for every trade."
+ogTitle: "About Yonkers Paint & Hardware"
+ogDescription: "Serving Yonkers since 1966 with paint, lumber, tools, plumbing & locksmith expertise."
+ogImageFile: "storefront-exterior-01.webp"
+bodyClass: "about-page"
+noCta: true
+---
+{%- from "img.njk" import img -%}
+
+<section class="about-showroom-hero hero hero--photo" style="background-image:url('/images/storefront-exterior-01.webp')">
+  <div class="about-showroom-hero__panel">
+    <p class="eyebrow">Family-run &bull; Yonkers, New York &bull; Since 1966</p>
+    <h1>About Our Family-Run Hardware Store in Yonkers, NY</h1>
+    <p>For generations, Yonkers Paint &amp; Hardware has helped homeowners, tradespeople and local businesses find the right product, solve the problem and keep the job moving.</p>
+  </div>
+</section>
+
+<section class="about-story" id="story" aria-labelledby="aboutStoryHeading">
+  <div class="about-story__media">
+    <figure class="figure">
+      {{ img("staff-portrait-storefront-01.webp", imagemeta, false, "eager", "wide", derivatives) }}
+      <figcaption>Mike, the owner, at Yonkers Paint &amp; Hardware.</figcaption>
+    </figure>
+  </div>
+  <div class="about-story__copy">
+    <p class="section-kicker">A Yonkers hardware store since 1966</p>
+    <h2 id="aboutStoryHeading">Built around honest advice and people who know the products.</h2>
+    <p>Yonkers Paint &amp; Hardware began in <strong>1966</strong> as a small family-run paint shop with a simple promise: honest advice, reliable products and neighbors helping neighbors.</p>
+    <p>As the business grew, the shop moved just around the corner into the larger building it occupies today at <strong>{{ site.address.street }}</strong> in downtown Yonkers.</p>
+    <p>Today, the store is a full-service hardware destination with Benjamin Moore&reg; paint, lumber, tools, plumbing and electrical supplies, plus a complete locksmith counter under our sister banner, <strong>{{ site.partner.name }}</strong>.</p>
+  </div>
+</section>
+
+<section class="about-facts" aria-label="About Yonkers Paint and Hardware">
+  <div class="about-facts__grid">
+    <div><strong>Since 1966</strong><span>Family-run in Yonkers</span></div>
+    <div><strong>Getty Square</strong><span>{{ site.address.street }}</span></div>
+    <div><strong>Hablamos espa&ntilde;ol</strong><span>Help at the counter</span></div>
+    <div><strong>Paint + hardware</strong><span>Products, services &amp; project help</span></div>
+  </div>
+</section>
+
+<section class="about-why" id="why" aria-labelledby="aboutWhyHeading">
+  <header class="about-section-heading">
+    <p class="section-kicker">Why customers keep coming back</p>
+    <h2 id="aboutWhyHeading">A neighborhood store with professional-level know-how.</h2>
+    <p>We combine the personal service of a local shop with the products and practical support people need for real projects.</p>
+  </header>
+  <div class="about-why__grid">
+    <article>
+      <span class="about-why__number">01</span>
+      <h3>Locally owned &amp; operated</h3>
+      <p>Family-run since 1966 and rooted in the Yonkers community.</p>
+    </article>
+    <article>
+      <span class="about-why__number">02</span>
+      <h3>Practical counter help</h3>
+      <p>Bring the question, fitting, color or project problem and talk it through with someone who knows the products.</p>
+    </article>
+    <article>
+      <span class="about-why__number">03</span>
+      <h3>Top brands &amp; real selection</h3>
+      <p>Benjamin Moore, Milwaukee, DeWalt, SharkBite and more across paint, tools, plumbing, electrical and hardware.</p>
+    </article>
+    <article>
+      <span class="about-why__number">04</span>
+      <h3>Service for the whole community</h3>
+      <p>Spanish-speaking staff, a wheelchair-accessible entrance and multiple modern payment options.</p>
+    </article>
+  </div>
+</section>
+
+<section class="about-gallery" aria-labelledby="aboutGalleryHeading">
+  <header class="about-section-heading">
+    <p class="section-kicker">Inside the store</p>
+    <h2 id="aboutGalleryHeading">A working hardware store, not a showroom you cannot touch.</h2>
+  </header>
+  <div class="figure-row">
+    {%- for item in placements.aboutFigures %}
+    <figure class="figure">
+      {{ img(item.image, imagemeta, false, "lazy", item.variant, derivatives) }}
+      <figcaption>{{ item.caption }}</figcaption>
+    </figure>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="about-promise" id="promise" aria-labelledby="aboutPromiseHeading">
+  <div class="about-promise__copy">
+    <p class="section-kicker">Our promise</p>
+    <h2 id="aboutPromiseHeading">Good products. Straight answers. Help that respects your time.</h2>
+    <p>Whether you are touching up a bedroom wall, replacing a sump pump, re-keying an office or trying to find the right fastener, our goal is the same: help you leave with a practical next step.</p>
+    <div class="about-promise__actions">
+      <a class="btn" href="tel:{{ site.phone.tel }}">Call {{ site.phone.display }}</a>
+      <a class="btn btn-ghost" href="{{ site.map.link }}" target="_blank" rel="noopener">Get Directions</a>
+    </div>
+  </div>
+  <div class="about-promise__location">
+    <span>Visit us in Getty Square</span>
+    <strong>{{ site.address.street }}</strong>
+    <small>{{ site.address.city }}, {{ site.address.region }} {{ site.address.postalCode }}</small>
+  </div>
+</section>

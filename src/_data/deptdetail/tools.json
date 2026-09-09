@@ -1,0 +1,120 @@
+{
+ "h1": "Tools &amp; Power Tools Department",
+ "sidebar": [
+  {
+   "id": "power",
+   "label": "Power Tools"
+  },
+  {
+   "id": "hand",
+   "label": "Hand Tools"
+  },
+  {
+   "id": "blades",
+   "label": "Blades &amp; Bits"
+  },
+  {
+   "id": "measure",
+   "label": "Measuring &amp; Layout"
+  },
+  {
+   "id": "safety",
+   "label": "Safety &amp; Jobsite"
+  },
+  {
+   "id": "storage",
+   "label": "Accessories &amp; Storage"
+  }
+ ],
+ "sections": [
+  {
+   "id": "power",
+   "heading": "Power Tools",
+   "intro": "Pro performance from brands you trust.",
+   "bullets": [
+    "Milwaukee® M18 &amp; M12 cordless drills, impacts &amp; combos",
+    "DeWalt® 20V MAX saws, grinders &amp; nailers",
+    "Wired circular saws, reciprocating saws &amp; routers",
+    "Batteries, chargers &amp; job-site radios"
+   ],
+   "image": "dept-tools-dewalt-display-01.webp"
+  },
+  {
+   "id": "hand",
+   "heading": "Hand Tools",
+   "intro": "Built to last, guaranteed for life.",
+   "bullets": [
+    "Hammers, pry bars &amp; demolition tools",
+    "Multi-bit screwdrivers, nut drivers &amp; hex keys",
+    "Adjustable, pipe &amp; combination wrenches",
+    "Utility knives, chisels &amp; aviation snips"
+   ]
+  },
+  {
+   "id": "blades",
+   "heading": "Blades, Bits &amp; Abrasives",
+   "intro": "Sharp, fast and job-matched.",
+   "bullets": [
+    "Diablo™ framing &amp; finish circular blades",
+    "Sawzall® demolition &amp; bi-metal recip blades",
+    "Spade, auger &amp; impact-rated driver bit kits",
+    "Norton® flap discs, cutoff wheels &amp; sanding belts"
+   ],
+   "image": "dept-tools-accessories-01.webp"
+  },
+  {
+   "id": "measure",
+   "heading": "Measuring &amp; Layout",
+   "intro": "Accuracy you can count on.",
+   "bullets": [
+    "Empire® and Johnson® levels &amp; rafter squares",
+    "25–40 ft tape measures &amp; laser distance meters",
+    "Marking chalk, plumb bobs &amp; stud finders",
+    "Digital calipers &amp; angle gauges"
+   ]
+  },
+  {
+   "id": "safety",
+   "heading": "Safety &amp; Jobsite Essentials",
+   "intro": "Protect your crew and your project.",
+   "bullets": [
+    "ANSI safety glasses, face shields &amp; ear muffs",
+    "N95 respirators &amp; reusable half-mask cartridges",
+    "High-vis vests, gloves &amp; knee pads",
+    "Job-site heaters, fans &amp; lighting"
+   ]
+  },
+  {
+   "id": "storage",
+   "heading": "Accessories &amp; Storage",
+   "intro": "Keep gear powered, organized and protected.",
+   "bullets": [
+    "Packout® &amp; ToughSystem® stackable boxes",
+    "Shop-vacuums, dust bags &amp; HEPA filters",
+    "Extension cords, power strips &amp; chargers",
+    "Magnetic trays, organizers &amp; parts bins"
+   ],
+   "callout": {
+    "heading": "Need the right tool today?",
+    "text": "Call {{PHONE}} — we’ll set it aside for pickup or deliver locally.",
+    "linkUrl": "/departments.html",
+    "linkLabel": "Back to Departments"
+   }
+  }
+ ],
+ "intro": "The tool wall runs from cordless drills, impact drivers and saws through hand tools, blades and bits, measuring and layout gear, safety equipment and jobsite storage. If you are choosing a cordless platform, the batteries matter more than the first tool: every manufacturer uses its own battery mount, so the system you buy into is the one you stay in. Buying a bare tool once you own batteries is usually far cheaper than another kit. For anything that cuts, the blade or bit does most of the work &mdash; a sharp, job-matched blade in a modest saw beats a worn general-purpose one in an expensive saw. Tell us what you are cutting and we can point you at the right tooth count or bit type. Fixing into masonry afterwards is its own question — see the <a href=\"/guides/wall-anchors.html\">wall anchor guide</a>.",
+ "faqs": [
+  {
+   "q": "What does a brushless motor actually change?",
+   "a": "A brushed motor uses carbon brushes rubbing on a commutator to switch current as the motor turns. That contact wears, wastes energy as heat and eventually needs replacing. A brushless motor does the switching electronically instead, so less energy is lost, the tool runs cooler, the motor lasts longer, and it can sense load and adjust. In practice you get more runtime per charge and a lighter tool for the same power, at a higher purchase price."
+  },
+  {
+   "q": "Which saw blade do I want?",
+   "a": "Tooth count is the short answer. Fewer, larger teeth cut fast and rough, which is what you want ripping framing lumber; more teeth cut slower and cleaner, which is what you want crosscutting trim or plywood you will see. A 24-tooth circular blade is a framing blade; a 60- or 80-tooth is a finish blade. For reciprocating saws, tooth pitch and blade material matter more than length &mdash; bi-metal for mixed material and demolition, finer teeth for metal."
+  },
+  {
+   "q": "Should I buy an impact driver or a drill?",
+   "a": "They are not the same tool. A drill applies steady rotation and is what you want for drilling holes and for anything needing controlled torque, like a hole saw or a spade bit. An impact driver adds rapid rotational hammering, which drives long screws and lags with far less strain on your wrist, but it is loud and too aggressive for delicate work. Most people who do both end up owning both, which is why they are so often sold as a pair."
+  }
+ ]
+}

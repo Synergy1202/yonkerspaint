@@ -1,0 +1,85 @@
+{
+ "h1": "Ice-Melt &amp; Snow-Removal Supplies",
+ "intro": "Winter storms don’t wait, and neither do we. From <strong>50-lb pallets of rock-salt</strong> to roof-rakes that clear ice-dams before they form, Yonkers Paint&nbsp;&amp;&nbsp;Hardware keeps high-demand items in stock all season. Contractor, property-manager or homeowner — we’ll even <em>deliver same-day</em> within Yonkers and nearby towns. Which product suits the job comes down to temperature and surface. Rock salt is the economical choice in mild cold; calcium chloride keeps working when the thermometer drops well below it; magnesium and CMA blends are the gentler options people reach for around pets and planting beds. Whatever you spread, a thin even scatter and prompt shovelling does more than a heavy layer left to sit.",
+ "sidebar": [
+  {
+   "id": "icemelt",
+   "label": "Bulk Ice-Melt"
+  },
+  {
+   "id": "spreaders",
+   "label": "Spreaders &amp; Scoops"
+  },
+  {
+   "id": "shovels",
+   "label": "Snow Shovels &amp; Pushers"
+  },
+  {
+   "id": "roofrakes",
+   "label": "Roof Rakes &amp; De-icing"
+  }
+ ],
+ "sections": [
+  {
+   "id": "icemelt",
+   "heading": "Bulk Ice-Melt",
+   "intro": "",
+   "bullets": [
+    "Rock-salt (sodium-chloride) &mdash; 50&nbsp;lb bags",
+    "Calcium-chloride pellets &amp; flakes (works to -25 °F)",
+    "Pet-safe magnesium/CMA blended melt",
+    "Pallet pricing &amp; forklift loading available"
+   ]
+  },
+  {
+   "id": "spreaders",
+   "heading": "Spreaders &amp; Scoops",
+   "intro": "",
+   "bullets": [
+    "Hand-crank broadcast spreaders (walk-behind)",
+    "Professional drop spreaders w/ pneumatic tires",
+    "Galvanized ice-melt scoops &amp; shovels"
+   ]
+  },
+  {
+   "id": "shovels",
+   "heading": "Snow Shovels &amp; Pushers",
+   "intro": "",
+   "bullets": [
+    "Garant® poly blade shovels (18&quot;–24&quot;)",
+    "True-Temper steel ice-choppers &amp; scrapers",
+    "Ergonomic bent-handle pushers up to 30&quot;"
+   ]
+  },
+  {
+   "id": "roofrakes",
+   "heading": "Roof Rakes &amp; De-icing",
+   "intro": "",
+   "bullets": [
+    "21-ft aluminum roof-rakes (telescoping)",
+    "Gutter guards &amp; heat-tape electrical kits",
+    "Granular roof-melt pucks for ice-dams"
+   ],
+   "callout": {
+    "heading": "Need bulk salt delivered?",
+    "text": "Call {{PHONE}} for pallet pricing and same-day local delivery.",
+    "linkUrl": "/departments.html",
+    "linkLabel": "Back to Departments"
+   }
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Which ice melt should I use, and will it hurt my concrete?",
+   "a": "Plain rock salt (sodium chloride) is the cheapest and works down to roughly 15&ndash;20&deg;F, losing effectiveness fast below that. Calcium chloride works far colder, gives off heat as it dissolves and acts quickly. Magnesium chloride and CMA blends are milder and are what most pet-safe products are built from. On concrete, the real damage is usually not chemical but physical (the <a href=\"/guides/choosing-ice-melt.html\">ice-melt guide</a> works through it): melt water soaks into the slab, refreezes and spalls the surface. Concrete poured within the last year is most at risk, and so is anything that was not air-entrained or properly cured. Shovel first, use the least product that does the job, and clear the slush rather than leaving it to refreeze."
+  },
+  {
+   "q": "How much ice melt do I actually need?",
+   "a": "Less than most people spread. A thin, even scatter is what works &mdash; ice melt is there to break the bond between ice and pavement so you can lift it, not to melt a storm away. Piling it on wastes product, tracks indoors, and puts more chloride into the soil at the edges of the walk. Spreading before a storm, so ice cannot bond in the first place, uses far less than trying to burn through afterwards."
+  },
+  {
+   "q": "What is a roof rake for?",
+   "a": "It is a long-handled blade for pulling snow off the lower few feet of a roof from the ground. The point is ice dams: heat escaping through the roof melts snow higher up, the water runs down to the cold overhang, refreezes, and the ridge that forms backs water up under the shingles. Clearing the bottom edge removes the snow that feeds the dam. Work from the ground, mind overhead lines, and never get on an icy roof."
+  }
+ ]
+}

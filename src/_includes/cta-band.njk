@@ -1,0 +1,24 @@
+{#- Pre-footer call to action, on every content page. Built entirely from
+    site.json; carries no claim that is not already sourced. -#}
+{%- from "icons.njk" import icon -%}
+<section class="cta-band" aria-labelledby="ctaBandHeading">
+  <div class="cta-band-inner">
+    <div>
+      <h2 id="ctaBandHeading">Come see us on Main Street</h2>
+      <p>{{ site.address.street }}, {{ site.address.city }}, {{ site.address.region }} {{ site.address.postalCode }}.
+         Street parking along Main Street, plus parking garages nearby.</p>
+      <ul class="cta-hours">
+        {%- for h in site.hours %}
+        <li><span>{{ h.label }}</span> <span>{{ h.display }}</span></li>
+        {%- endfor %}
+      </ul>
+    </div>
+    <div class="cta-band-actions">
+      <a class="btn" href="tel:{{ site.phone.tel }}">{{ icon("phone", 18) }}<span>Call {{ site.phone.display }}</span></a>
+      <a class="btn btn-outline" href="{{ site.map.link }}" target="_blank" rel="noopener">{{ icon("pin", 18) }}<span>Directions</span></a>
+      {%- if site.reviewUrl %}
+      <a class="btn btn-outline" href="{{ site.reviewUrl }}" target="_blank" rel="noopener">Review us on Google</a>
+      {%- endif %}
+    </div>
+  </div>
+</section>

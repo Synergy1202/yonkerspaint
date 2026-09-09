@@ -1,0 +1,192 @@
+---
+permalink: /index.html
+title: "Hardware Store & Benjamin Moore Dealer in Yonkers, NY | Yonkers Paint & Hardware"
+description: "Yonkers Paint & Hardware stocks Benjamin Moore paint, power tools, fasteners, plumbing & electrical supplies, lawn & garden, key cutting and local delivery throughout Yonkers."
+ogTitle: "Yonkers Paint & Hardware"
+ogDescription: "Your neighborhood hardware store for paint, tools, plumbing, electrical, garden and more."
+ogImageFile: "dept-paint-color-wall-01.webp"
+noCta: true
+bodyClass: home
+---
+{%- from "img.njk" import img -%}
+{%- from "icons.njk" import icon, stars -%}
+
+<section class="hero hero--photo home-hero" style="background-image:url('/images/dept-paint-color-wall-01.webp')">
+  <div class="home-hero-inner">
+    <div class="home-hero-copy">
+      <p class="eyebrow">Family-run in Yonkers since 1966</p>
+      <h1>Your Full-Service Yonkers Hardware Store</h1>
+      <p class="hero-lede">Benjamin Moore paint, tools, plumbing, electrical, garden supplies and more &mdash; plus key cutting and local delivery.</p>
+      <div class="hero-actions">
+        <a class="btn" href="tel:{{ site.phone.tel }}">Call {{ site.phone.display }}</a>
+        <a class="btn btn-ghost" href="/departments.html">Shop Departments</a>
+      </div>
+      <div class="hero-meta" aria-label="Store highlights">
+        <span>{{ icon("pin", 16) }}<span>65 Main Street &middot; Getty Square</span></span>
+        <span>{{ icon("chat", 16) }}<span lang="es">&iexcl;Hablamos Espa&ntilde;ol!</span></span>
+      </div>
+      <p class="partner-line">
+        <span>Benjamin Moore dealer</span>
+        <img src="/images/benjamin-moore.png" alt="Benjamin Moore" class="partner-logo" width="320" height="320">
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="whyus home-trust" aria-labelledby="whyHeading">
+  <div class="whyus-inner">
+    <div class="section-head section-head--compact">
+      <p class="section-kicker">Local store. Practical help.</p>
+      <h2 id="whyHeading">Why neighbors choose us</h2>
+    </div>
+    <ul class="why-list">
+      <li>
+        {{ icon("clock") }}
+        <h3>Family-run since 1966</h3>
+        <p>Local knowledge and practical help, backed by decades behind the counter.</p>
+      </li>
+      <li>
+        {{ icon("drop") }}
+        <h3>Benjamin Moore dealer</h3>
+        <p>Paint mixed and color matched at the counter.</p>
+      </li>
+      <li>
+        {{ icon("key") }}
+        <h3>Keys cut while you wait</h3>
+        <p>House, office and most padlock keys.</p>
+      </li>
+      <li>
+        {{ icon("truck") }}
+        <h3>Same-day delivery</h3>
+        <p>Available locally &mdash; call to confirm.</p>
+      </li>
+      <li>
+        {{ icon("chat") }}
+        <h3><span lang="es">&iexcl;Hablamos Espa&ntilde;ol!</span></h3>
+        <p>Spanish-speaking staff on the floor.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="categories band--alt home-categories" aria-labelledby="shopHeading">
+  <div class="section-head">
+    <p class="section-kicker">Everything for the next job</p>
+    <h2 id="shopHeading">Shop by Department</h2>
+    <p>Paint, tools, electrical, plumbing, garden supplies and more. Start with a department or call us if you are looking for something specific.</p>
+  </div>
+  <div class="category-grid">
+    {%- for d in departments %}
+    <a class="cat-card" href="{{ d.url }}">
+      {%- if d.images.length %}
+      <span class="cat-media">{{ img(d.images[0], imagemeta, false, "lazy", "card", derivatives) }}</span>
+      {%- else %}
+      <span class="cat-media cat-media--flat" aria-hidden="true"><span>{{ d.name }}</span></span>
+      {%- endif %}
+      <span class="cat-label"><span>{{ d.name }}</span><span aria-hidden="true">&rarr;</span></span>
+    </a>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="services-strip home-services" id="services" aria-labelledby="popularHeading">
+  <div class="section-head section-head--inverse">
+    <p class="section-kicker">Useful help at the counter</p>
+    <h2 id="popularHeading">Popular In-Store Services</h2>
+    <p>Three practical services available right at the store.</p>
+  </div>
+  <div class="service-cards">
+    <div class="service-card">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 14a5 5 0 1 1 4.9-6H22v4h-3v3h-3v3h-4.1A5 5 0 0 1 7 14Zm0-2a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/></svg>
+      <h3>Key Duplication</h3>
+      <p>House, office and most padlock keys cut while you wait.</p>
+    </div>
+    <div class="service-card">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v8a5 5 0 0 0 10 0V3H3Zm8 6a3 3 0 0 1-6 0V5h6v4ZM9 17h6v2a3 3 0 1 1-6 0v-2Z"/></svg>
+      <h3>Paint Color Matching</h3>
+      <p>Benjamin Moore color matching and paint mixed at the counter.</p>
+    </div>
+    <div class="service-card">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1 4h13v9H1V4Zm14 0h4l4 4v5h-4V9h-4V4ZM7 19a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm12 0a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"/></svg>
+      <h3>Local Delivery</h3>
+      <p>Same-day delivery is available locally. Call the store to confirm.</p>
+    </div>
+  </div>
+  <a class="btn btn-light" href="/services.html">See All Services</a>
+</section>
+
+{#- One pull-quote, pulled from reviews.json by name so it stays single-
+    sourced with the reviews page, and rendered with that page's own card and
+    attribution treatment. No review schema, here or there. -#}
+{%- set pull = reviews | findBy("name", "Sherry Bobrowsky") -%}
+{%- if pull %}
+<section class="pullquote reviews home-review" aria-labelledby="pullHeading">
+  <div class="home-review-inner">
+    <p class="section-kicker">From a local customer</p>
+    <h2 id="pullHeading">Trusted by Yonkers neighbors</h2>
+    <article class="card">
+      {{ stars(pull.stars) }}
+      <blockquote><p>{{ pull.text }}</p></blockquote>
+      <p class="attribution">
+        <span class="attribution-name">{{ pull.name }}</span>
+        <span class="attribution-source">{{ pull.source }}</span>
+      </p>
+      <p class="pullquote-more"><a class="review-all" href="/reviews.html">Read more customer reviews</a></p>
+    </article>
+  </div>
+</section>
+{%- endif %}
+
+<section class="gallery home-gallery" aria-labelledby="galleryHeading">
+  <div class="gallery-inner">
+    <div class="section-head">
+      <p class="section-kicker">See what is in store</p>
+      <h2 id="galleryHeading">A Look Inside 65 Main Street</h2>
+      <p>This website shows only part of what we carry. Visit the store to see the full selection.</p>
+    </div>
+    <div class="gallery-grid">
+      {%- for item in placements.homeGallery %}
+      <figure class="figure">
+        {{ img(item.image, imagemeta, false, "lazy", item.variant, derivatives) }}
+        <figcaption>{{ item.caption }}</figcaption>
+      </figure>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="cta-locksmith home-locksmith" id="locksmith" aria-labelledby="lockHeading">
+  <div class="home-locksmith-inner">
+    <p class="section-kicker">Need a locksmith?</p>
+    <h2 id="lockHeading">Locked Out or Need a New Key?</h2>
+    <p>
+      <strong>{{ site.partner.name }}</strong> &ndash; Licensed &amp; insured locksmiths serving
+      Yonkers &amp; Westchester since 1966. Residential &bull; Commercial &bull; Automotive Service.
+    </p>
+    <div class="home-locksmith-actions">
+      <a class="btn" href="{{ site.partner.url }}" target="_blank" rel="noopener">Get Emergency Help</a>
+      <a class="locksmith-phone" href="tel:{{ site.partner.phoneTel }}">Call {{ site.partner.phoneDisplay }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact-info band--surface home-visit" id="visit" aria-labelledby="visitHeading">
+  <div class="home-visit-copy">
+    <p class="section-kicker">Getty Square &middot; Downtown Yonkers</p>
+    <h2 id="visitHeading">Visit the Store &mdash; See the Full Selection</h2>
+    <p>This website highlights just some of what we carry. Stop by or call for thousands more items in stock every day.</p>
+    <address>
+      {{ site.address.street }} &bull; {{ site.address.city }}, {{ site.address.region }}&nbsp;{{ site.address.postalCode }}
+    </address>
+    <div class="home-visit-actions">
+      <a class="btn" href="tel:{{ site.phone.tel }}">Call {{ site.phone.display }}</a>
+      <a class="btn btn-outline" href="{{ site.map.link }}" target="_blank" rel="noopener">Get Directions</a>
+    </div>
+    <p class="home-visit-email"><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+  </div>
+  <div class="map">
+    <iframe loading="lazy" title="Map to {{ site.name }}"
+            src="{{ site.map.embed }}"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </div>
+</section>

@@ -1,0 +1,337 @@
+[
+ {
+  "use": "Body text on page background",
+  "fg": "--text",
+  "fgTok": "text",
+  "bg": "--surface-alt",
+  "bgTok": "surf-alt"
+ },
+ {
+  "use": "Body text on card surface",
+  "fg": "--text",
+  "fgTok": "text",
+  "bg": "--surface",
+  "bgTok": "white"
+ },
+ {
+  "use": "Body text on pale blue panel",
+  "fg": "--text",
+  "fgTok": "text",
+  "bg": "--primary-tint",
+  "bgTok": "tint"
+ },
+ {
+  "use": "Muted text on card surface",
+  "fg": "--neutral-600",
+  "fgTok": "n-600",
+  "bg": "--surface",
+  "bgTok": "white"
+ },
+ {
+  "use": "Muted text on page background",
+  "fg": "--neutral-600",
+  "fgTok": "n-600",
+  "bg": "--surface-alt",
+  "bgTok": "surf-alt"
+ },
+ {
+  "use": "Muted text on pale blue panel",
+  "fg": "--neutral-600",
+  "fgTok": "n-600",
+  "bg": "--primary-tint",
+  "bgTok": "tint"
+ },
+ {
+  "use": "Section heading (blue) on white",
+  "fg": "--primary",
+  "fgTok": "primary",
+  "bg": "--surface",
+  "bgTok": "white"
+ },
+ {
+  "use": "Section heading (blue) on page bg",
+  "fg": "--primary",
+  "fgTok": "primary",
+  "bg": "--surface-alt",
+  "bgTok": "surf-alt"
+ },
+ {
+  "use": "Blue link/heading on pale tint",
+  "fg": "--primary",
+  "fgTok": "primary",
+  "bg": "--primary-tint",
+  "bgTok": "tint"
+ },
+ {
+  "use": "Phone number (red) on white",
+  "fg": "--secondary",
+  "fgTok": "secondary",
+  "bg": "--surface",
+  "bgTok": "white"
+ },
+ {
+  "use": "Phone number (red) on page bg",
+  "fg": "--secondary",
+  "fgTok": "secondary",
+  "bg": "--surface-alt",
+  "bgTok": "surf-alt"
+ },
+ {
+  "use": "Outline button label on white",
+  "fg": "--primary",
+  "fgTok": "primary",
+  "bg": "--surface",
+  "bgTok": "white"
+ },
+ {
+  "use": "Nav + header text on brand blue",
+  "fg": "--on-primary",
+  "fgTok": "white",
+  "bg": "--primary",
+  "bgTok": "primary"
+ },
+ {
+  "use": "Dropdown link on brand blue",
+  "fg": "--on-primary",
+  "fgTok": "white",
+  "bg": "--primary",
+  "bgTok": "primary"
+ },
+ {
+  "use": "Solid button label on red",
+  "fg": "--on-primary",
+  "fgTok": "white",
+  "bg": "--secondary",
+  "bgTok": "secondary"
+ },
+ {
+  "use": "Solid button label on red hover",
+  "fg": "--on-primary",
+  "fgTok": "white",
+  "bg": "--secondary-dark",
+  "bgTok": "sec-dark"
+ },
+ {
+  "use": "Light button label on brand blue",
+  "fg": "--primary",
+  "fgTok": "primary",
+  "bg": "--surface",
+  "bgTok": "white"
+ },
+ {
+  "use": "Text on dark blue panel",
+  "fg": "--on-primary",
+  "fgTok": "white",
+  "bg": "--primary-dark",
+  "bgTok": "prim-dark"
+ },
+ {
+  "use": "Footer heading on footer bg",
+  "fg": "--on-primary",
+  "fgTok": "white",
+  "bg": "--neutral-900",
+  "bgTok": "n-900"
+ },
+ {
+  "use": "Footer body text on footer bg",
+  "fg": "--neutral-300",
+  "fgTok": "n-300",
+  "bg": "--neutral-900",
+  "bgTok": "n-900"
+ },
+ {
+  "use": "Footer copyright on footer bg",
+  "fg": "--neutral-300",
+  "fgTok": "n-300",
+  "bg": "--neutral-900",
+  "bgTok": "n-900"
+ },
+ {
+  "use": "Review star glyphs on white",
+  "fg": "--star",
+  "fgTok": "star",
+  "bg": "--surface",
+  "bgTok": "white"
+ },
+ {
+  "use": "Flat department panel label",
+  "fg": "--on-primary",
+  "fgTok": "white",
+  "bg": "--primary",
+  "bgTok": "primary",
+  "large": true
+ },
+ {
+  "use": "Hero headline over scrim",
+  "fg": "--on-primary",
+  "fgTok": "white",
+  "bg": "--hero-scrim-solid",
+  "bgTok": "scrim",
+  "large": true
+ },
+ {
+  "use": "Hero body copy over scrim",
+  "fg": "--on-primary",
+  "fgTok": "white",
+  "bg": "--hero-scrim-solid",
+  "bgTok": "scrim"
+ },
+ {
+  "use": "Skip link on white",
+  "fg": "--primary",
+  "fgTok": "primary",
+  "bg": "--surface",
+  "bgTok": "white"
+ },
+ {
+  "use": "Focus ring against brand blue",
+  "fg": "--focus",
+  "fgTok": "focus",
+  "bg": "--primary",
+  "bgTok": "primary",
+  "large": true
+ },
+ {
+  "use": "Focus ring against page bg",
+  "fg": "--focus-dark",
+  "fgTok": "focus-dk",
+  "bg": "--surface-alt",
+  "bgTok": "surf-alt",
+  "large": true
+ },
+ {
+  "use": "Utility strip phone on dark strip",
+  "fg": "--on-primary",
+  "fgTok": "white",
+  "bg": "--neutral-900",
+  "bgTok": "n-900"
+ },
+ {
+  "use": "Utility strip hours on dark strip",
+  "fg": "--neutral-300",
+  "fgTok": "n-300",
+  "bg": "--neutral-900",
+  "bgTok": "n-900"
+ },
+ {
+  "use": "Utility strip red accent icon",
+  "fg": "--secondary-on-dark",
+  "fgTok": "sec-dk-bg",
+  "bg": "--neutral-900",
+  "bgTok": "n-900",
+  "large": true
+ },
+ {
+  "use": "Utility strip Directions link",
+  "fg": "--on-primary",
+  "fgTok": "white",
+  "bg": "--neutral-900",
+  "bgTok": "n-900"
+ },
+ {
+  "use": "Mega-panel department name",
+  "fg": "--primary",
+  "fgTok": "primary",
+  "bg": "--surface",
+  "bgTok": "white"
+ },
+ {
+  "use": "Mega-panel blurb on white",
+  "fg": "--neutral-600",
+  "fgTok": "n-600",
+  "bg": "--surface",
+  "bgTok": "white"
+ },
+ {
+  "use": "Mega-panel blurb on hover tint",
+  "fg": "--neutral-600",
+  "fgTok": "n-600",
+  "bg": "--primary-tint",
+  "bgTok": "tint"
+ },
+ {
+  "use": "Mega-panel View all link",
+  "fg": "--primary",
+  "fgTok": "primary",
+  "bg": "--surface",
+  "bgTok": "white"
+ },
+ {
+  "use": "Drawer nav item on brand blue",
+  "fg": "--on-primary",
+  "fgTok": "white",
+  "bg": "--primary",
+  "bgTok": "primary"
+ },
+ {
+  "use": "Drawer title on brand blue",
+  "fg": "--on-primary",
+  "fgTok": "white",
+  "bg": "--primary",
+  "bgTok": "primary"
+ },
+ {
+  "use": "Breadcrumb link on page bg",
+  "fg": "--primary",
+  "fgTok": "primary",
+  "bg": "--surface-alt",
+  "bgTok": "surf-alt"
+ },
+ {
+  "use": "Breadcrumb current page",
+  "fg": "--neutral-600",
+  "fgTok": "n-600",
+  "bg": "--surface-alt",
+  "bgTok": "surf-alt"
+ },
+ {
+  "use": "CTA band heading on tint",
+  "fg": "--primary",
+  "fgTok": "primary",
+  "bg": "--primary-tint",
+  "bgTok": "tint"
+ },
+ {
+  "use": "CTA band body on tint",
+  "fg": "--text",
+  "fgTok": "text",
+  "bg": "--primary-tint",
+  "bgTok": "tint"
+ },
+ {
+  "use": "CTA band hours on tint",
+  "fg": "--neutral-600",
+  "fgTok": "n-600",
+  "bg": "--primary-tint",
+  "bgTok": "tint"
+ },
+ {
+  "use": "Disclosure marker on tint",
+  "fg": "--primary",
+  "fgTok": "primary",
+  "bg": "--primary-tint",
+  "bgTok": "tint",
+  "large": true
+ },
+ {
+  "use": "Table header on tint",
+  "fg": "--primary",
+  "fgTok": "primary",
+  "bg": "--primary-tint",
+  "bgTok": "tint"
+ },
+ {
+  "use": "Table body text on white",
+  "fg": "--text",
+  "fgTok": "text",
+  "bg": "--surface",
+  "bgTok": "white"
+ },
+ {
+  "use": "Agency credit link on footer bg",
+  "fg": "--neutral-300",
+  "fgTok": "n-300",
+  "bg": "--neutral-900",
+  "bgTok": "n-900"
+ }
+]

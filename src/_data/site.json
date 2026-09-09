@@ -1,0 +1,60 @@
+{
+  "name": "Yonkers Paint & Hardware",
+  "shortName": "Yonkers Paint & Hardware",
+  "origin": "https://yonkerspaintandhardware.com",
+  "foundingDate": "1966",
+  "email": "service@yonkerspaintandhardware.com",
+  "address": {
+    "street": "65 Main Street",
+    "city": "Yonkers",
+    "region": "NY",
+    "postalCode": "10701",
+    "country": "US"
+  },
+  "geo": {
+    "latitude": 40.9347381,
+    "longitude": -73.9011803,
+    "_note": "Verified against the store's Google Business Profile pin."
+  },
+  "phone": {
+    "display": "914-963-3525",
+    "tel": "+19149633525",
+    "schema": "+1-914-963-3525"
+  },
+  "hours": [
+    { "label": "Mon\u2013Fri", "display": "8:30 AM\u20136 PM", "days": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:30", "closes": "18:00" },
+    { "label": "Saturday",  "display": "10 AM\u20135 PM",   "days": ["Saturday"], "opens": "10:00", "closes": "17:00" },
+    { "label": "Sunday",    "display": "Closed",            "days": ["Sunday"], "closed": true }
+  ],
+  "instagram": {
+    "handle": "@yonkerspaintandhardware",
+    "url": "https://www.instagram.com/yonkerspaintandhardware/"
+  },
+  "partner": {
+    "name": "Safeguard Lock & Key",
+    "url": "https://safeguardlock.net/",
+    "phoneDisplay": "914-963-6390",
+    "phoneTel": "+19149636390"
+  },
+  "neighborhood": "Getty Square",
+  "accessibility": {
+    "wheelchairAccessibleEntrance": true
+  },
+  "payments": ["Credit card", "Debit card", "NFC mobile payments"],
+  "reviewUrl": "",
+  "_reviewUrl_note": "Google review short link (g.page/r/...). Left empty deliberately: when empty the site renders no review link at all, and tools/make-review-kit.js refuses to generate. Paste the owner's link here to switch both on.",
+  "map": {
+    "embed": "https://www.google.com/maps?q=65+Main+Street,+Yonkers,+NY+10701&output=embed",
+    "link": "https://maps.app.goo.gl/X45mj2hnHMZPGVuTA"
+  },
+  "form": {
+    "action": "https://formsubmit.co/service@yonkerspaintandhardware.com",
+    "_note": "FormSubmit requires a one-time activation email to this address before submissions are delivered. See README."
+  },
+  "copyrightYear": 2026,
+  "brands": [
+    "Benjamin Moore", "Milwaukee", "DeWalt", "SharkBite", "Gorilla",
+    "Husky", "Rust-Oleum", "3M", "Minwax", "Zinsser", "Quikrete",
+    "Henry", "Oatey", "Hillman", "O-Cedar", "WD-40", "Garant", "Purdy", "Wooster"
+  ]
+}

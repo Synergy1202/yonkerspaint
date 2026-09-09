@@ -1,0 +1,120 @@
+---
+title: "Hardware Store Departments in Yonkers, NY | Yonkers Paint & Hardware"
+description: "Shop Benjamin Moore paint, tools, plumbing, electrical, fasteners, roofing, garden, cleaning and seasonal supplies at Yonkers Paint & Hardware, 65 Main Street in Yonkers, NY."
+ogTitle: "Hardware Store Departments in Yonkers, NY | Yonkers Paint & Hardware"
+ogDescription: "Browse paint, tools, plumbing, electrical, fasteners, roofing, garden and more at our Getty Square hardware store in Yonkers."
+bodyClass: "departments-page"
+---
+{%- from "img.njk" import img -%}
+{%- set heroDept = departments[0] -%}
+{%- set heroKey = heroDept.images[0] if heroDept and heroDept.images.length else false -%}
+
+{% if heroKey %}
+<section class="hero hero--photo hero--inner showroom-hero" style="background-image:url('/images/{{ heroKey }}')">
+  <div class="showroom-hero__panel">
+    <p class="eyebrow">Yonkers Paint &amp; Hardware · Getty Square</p>
+    <h1>Paint, Hardware &amp; Project Supplies in Yonkers, NY</h1>
+    <p class="showroom-hero__lede">From Benjamin Moore paint and professional tools to plumbing, electrical and everyday hardware, get the products you need with practical help from people who know the work.</p>
+    <div class="showroom-hero__actions">
+      <a class="btn" href="#shopDepartments">Shop departments</a>
+      <a class="btn btn-ghost" href="tel:{{ site.phone.tel }}">Call {{ site.phone.display }}</a>
+    </div>
+    <div class="showroom-hero__proof" aria-label="Store highlights">
+      <span><strong>Benjamin Moore</strong><small>Paint &amp; finishing</small></span>
+      <span><strong>Local help</strong><small>Real counter advice</small></span>
+      <span><strong>Getty Square</strong><small>65 Main Street</small></span>
+    </div>
+  </div>
+</section>
+{% else %}
+<section class="hero hero--flat hero--inner showroom-hero showroom-hero--flat">
+  <div class="showroom-hero__panel">
+    <p class="eyebrow">Yonkers Paint &amp; Hardware · Getty Square</p>
+    <h1>Paint, Hardware &amp; Project Supplies in Yonkers, NY</h1>
+    <p class="showroom-hero__lede">From Benjamin Moore paint and professional tools to plumbing, electrical and everyday hardware, get the products you need with practical help from people who know the work.</p>
+    <div class="showroom-hero__actions">
+      <a class="btn" href="#shopDepartments">Shop departments</a>
+      <a class="btn btn-ghost" href="tel:{{ site.phone.tel }}">Call {{ site.phone.display }}</a>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section id="shopDepartments" class="departments-intro" aria-labelledby="departmentsIntroHeading">
+  <div class="departments-intro-copy">
+    <p class="section-kicker">Shop by department</p>
+    <h2 id="departmentsIntroHeading">Hardware Store Departments in Yonkers, NY</h2>
+    <p>Browse the core departments at our downtown Yonkers hardware store for paint, tools, plumbing, electrical, fasteners, roofing and masonry materials, cleaning products, garden supplies and seasonal essentials. Our website shows the main categories; the shelves at 65 Main Street hold much more.</p>
+  </div>
+  <aside class="departments-intro-note" aria-label="Help finding a product">
+    <p class="section-kicker">Need the right part?</p>
+    <strong>Bring the question to the counter.</strong>
+    <p>If you are matching a paint color, replacing a fitting or trying to find a hard-to-find piece of hardware, call <a href="tel:{{ site.phone.tel }}">{{ site.phone.display }}</a> or stop in. We will help you narrow it down.</p>
+  </aside>
+</section>
+
+<div class="department-jump">
+  <p class="department-jump-label">Find a department</p>
+  <nav class="jump-links" aria-label="Department index">
+    {%- for d in departments %}
+    <a href="#{{ d.anchor }}">{{ d.navName }}</a>
+    {%- endfor %}
+  </nav>
+</div>
+
+<div class="departments-main">
+  {%- for d in departments %}
+  <article id="{{ d.anchor }}"
+           class="department"
+           aria-labelledby="{{ d.slug }}Heading">
+    <a class="dept-media-link" href="{{ d.url }}" aria-label="Shop {{ d.navName }}">
+      {%- if d.images.length %}
+      <div class="dept-media">{{ img(d.images[0], imagemeta, false, "lazy", "wide", derivatives) }}</div>
+      {%- else %}
+      <div class="dept-media dept-media--flat" aria-hidden="true"><span>{{ d.name }}</span></div>
+      {%- endif %}
+    </a>
+    <div class="dept-content">
+      <p class="dept-card-kicker">Shop department</p>
+      <h2 id="{{ d.slug }}Heading"><a href="{{ d.url }}">{{ d.name }}</a></h2>
+      <p>{{ d.blurb | safe }}</p>
+      <ul class="dept-highlights" aria-label="Popular {{ d.navName }} items">
+        {%- for p in d.points %}
+        {%- if loop.index <= 3 %}<li>{{ p | safe }}</li>{% endif %}
+        {%- endfor %}
+      </ul>
+      <a class="dept-shop-link" href="{{ d.url }}">Shop {{ d.navName | safe }} <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </article>
+  {%- endfor %}
+</div>
+
+<section class="brands-strip showroom-brands" aria-labelledby="brandsHeading">
+  <div class="showroom-brands__copy">
+    <p class="section-kicker">Trusted brands</p>
+    <h2 id="brandsHeading">Quality products for real projects.</h2>
+    <p>We stock trusted paint, hardware and tool brands for homeowners, DIYers and working contractors. Availability varies by item, so call when you need something specific.</p>
+  </div>
+  <div class="showroom-brands__list" aria-label="Brands available at Yonkers Paint & Hardware">
+    {%- for brand in site.brands %}
+    <span>{{ brand | safe }}</span>
+    {%- endfor %}
+  </div>
+</section>
+
+<section class="departments-project-cta" aria-labelledby="projectCtaHeading">
+  <div class="departments-project-cta__copy">
+    <p class="section-kicker">More than a hardware store</p>
+    <h2 id="projectCtaHeading">Let’s get your project moving.</h2>
+    <p>Whether you are repainting a room, making a repair or picking up supplies for the jobsite, start with the right material and the right advice. Visit us in Getty Square or call before you make the trip.</p>
+    <div class="departments-project-cta__actions">
+      <a class="btn" href="tel:{{ site.phone.tel }}">Call {{ site.phone.display }}</a>
+      <a class="btn btn-ghost" href="{{ site.map.link }}" target="_blank" rel="noopener">Get directions</a>
+    </div>
+  </div>
+  <dl class="departments-project-cta__facts">
+    <div><dt>Location</dt><dd>65 Main Street, Yonkers, NY 10701</dd></div>
+    <div><dt>Neighborhood</dt><dd>Getty Square · Downtown Yonkers</dd></div>
+    <div><dt>In-store help</dt><dd>Paint, hardware, tools, repairs and project supplies</dd></div>
+  </dl>
+</section>

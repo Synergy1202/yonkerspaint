@@ -1,0 +1,42 @@
+[
+ { "id": "general", "heading": "General", "items": [
+   { "q": "¿Hablan español?",
+     "a": "¡Sí! Nuestro personal bilingüe puede ayudarle en español." },
+   { "q": "Which payment methods do you accept?",
+     "a": "Visa, Mastercard, American Express, Discover, Apple Pay and cash. Business house-accounts may pay on invoice." }
+ ]},
+ { "id": "paint", "heading": "Paint &amp; Color Matching", "items": [
+   { "q": "How large a sample do you need to match a paint color?",
+     "a": "A flat sample at least 1&nbsp;inch square (larger than a quarter) gives the most accurate reading on our Benjamin Moore spectrophotometer." },
+   { "q": "Do you carry Benjamin Moore Aura, Regal, Ben &amp; ElementGuard?",
+     "a": "Yes&mdash;all in stock. Benjamin Moore Aura goes on promotion regularly; ask at the counter or check the current in-store flyer for the latest offer." }
+ ]},
+ { "id": "keys", "heading": "Keys &amp; Locks", "items": [
+   { "q": "Do I need an appointment for key cutting?",
+     "a": "No appointment needed. Most house or padlock keys are duplicated in under two minutes." },
+   { "q": "Can you cut car keys?",
+     "a": "We stock chip-less automotive blanks and can duplicate older vehicle keys. Transponder and high-security laser keys require referral to a locksmith." }
+ ]},
+ { "id": "building", "heading": "Building Materials &amp; Cutting", "items": [
+   { "q": "Will you cut plywood or sheet-rock to size?",
+     "a": "Absolutely&mdash;your first two cuts are free on every panel; each additional cut is $1 (as of 2026)." },
+   { "q": "What sizes of sheet-rock and plywood do you stock?",
+     "a": "½″ &amp; ⅝″ Sheet-rock (regular &amp; mold-resistant), ½″ and ¾″ plywood, cement board 3&nbsp;ft × 5&nbsp;ft, 2 × 4 studs in 8′ and 10′ lengths, plus drop-ceiling tiles 2′ × 4′." },
+   { "q": "Do you offer pipe threading?",
+     "a": "Yes&mdash;black iron or galvanized pipe up to 2″ NPT cut and threaded while you wait." }
+ ]},
+ { "id": "services", "heading": "Services &amp; Delivery", "items": [
+   { "q": "What areas do you deliver to?",
+     "a": "Yonkers, Bronxville, Mt Vernon, Hastings-on-Hudson and most of southern Westchester. Delivery starts at $15 (as of 2026); heavy or pallet loads are quoted individually." },
+   { "q": "Do you sell Yonkers-certified waste bins and Tuff garbage bags?",
+     "a": "Yes. We stock certified curbside bins plus Tuff Bags in 55- and 65-gallon sizes, and compactor bags (34–36″) in 50-count boxes." },
+   { "q": "Do you sharpen knives and tools?",
+     "a": "Kitchen knives, scissors, chisels and mower blades can be dropped off weekdays before 2 p.m. for same-day pick-up." }
+ ]},
+ { "id": "returns", "heading": "Payments &amp; Returns", "items": [
+   { "q": "What is your return policy?",
+     "a": "Unopened, non-tinted items may be returned within 30 days with receipt. Custom-tinted paint, cut materials and threaded pipe are final sale." },
+   { "q": "Do you offer bulk or contractor pricing?",
+     "a": "Yes—show us a current invoice or quote and we’ll meet or beat comparable pricing on paint, sheet-goods, Quikrete, etc. You can also open a tax-exempt house account with valid resale certificate." }
+ ]}
+]

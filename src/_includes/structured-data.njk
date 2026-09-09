@@ -1,0 +1,184 @@
+{#- One HardwareStore block on every page, built from site.json. Page types
+    extend it via the `pageType` front-matter key.
+    NOTE: the old AggregateRating (4.9 / 143 reviews) is deliberately absent.
+    See README.md. -#}
+{%- set hoursOpen = [] -%}
+{%- for h in site.hours -%}{%- if not h.closed -%}{%- set _ = hoursOpen.push(h) -%}{%- endif -%}{%- endfor -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "HardwareStore",
+      "@id": {{ (site.origin + "/#store") | dump | safe }},
+      "name": {{ site.name | dump | safe }},
+      "url": {{ (site.origin + "/") | dump | safe }},
+      "image": {{ (site.origin + "/images/og-default.jpg") | dump | safe }},
+      "logo": {{ (site.origin + "/images/yonkerslogo.png") | dump | safe }},
+      "telephone": {{ site.phone.schema | dump | safe }},
+      "email": {{ site.email | dump | safe }},
+      "foundingDate": {{ site.foundingDate | dump | safe }},
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": {{ site.address.street | dump | safe }},
+        "addressLocality": {{ site.address.city | dump | safe }},
+        "addressRegion": {{ site.address.region | dump | safe }},
+        "postalCode": {{ site.address.postalCode | dump | safe }},
+        "addressCountry": {{ site.address.country | dump | safe }}
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": {{ site.geo.latitude }},
+        "longitude": {{ site.geo.longitude }}
+      },
+      "hasMap": {{ site.map.link | dump | safe }},
+      "openingHoursSpecification": [
+        {%- for h in hoursOpen %}
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": {{ h.days | dump | safe }},
+          "opens": {{ h.opens | dump | safe }},
+          "closes": {{ h.closes | dump | safe }}
+        }{% if not loop.last %},{% endif %}
+        {%- endfor %}
+      ],
+      "paymentAccepted": {{ site.payments | join(", ") | dump | safe }},
+      "amenityFeature": {
+        "@type": "LocationFeatureSpecification",
+        "name": "Wheelchair accessible entrance",
+        "value": true
+      },
+      "sameAs": [{{ site.instagram.url | dump | safe }}]
+    }
+    {%- if pageType == "department" %},
+    {
+      "@type": "BreadcrumbList",
+      "@id": {{ (site.origin + page.url + "#breadcrumb") | dump | safe }},
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home",
+          "item": {{ (site.origin + "/") | dump | safe }} },
+        { "@type": "ListItem", "position": 2, "name": "Departments",
+          "item": {{ (site.origin + "/departments.html") | dump | safe }} },
+        { "@type": "ListItem", "position": 3, "name": {{ dept.name | striptags | dump | safe }},
+          "item": {{ (site.origin + page.url) | dump | safe }} }
+      ]
+    }
+      {%- set deptFaqs = deptdetail[dept.slug].faqs -%}
+      {%- if deptFaqs and deptFaqs.length %},
+    {
+      "@type": "FAQPage",
+      "@id": {{ (site.origin + page.url + "#faq") | dump | safe }},
+      "mainEntity": [
+        {%- for item in deptFaqs %}
+        {
+          "@type": "Question",
+          "name": {{ item.q | striptags | dump | safe }},
+          "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | striptags | dump | safe }} }
+        }{% if not loop.last %},{% endif %}
+        {%- endfor %}
+      ]
+    }
+      {%- endif %}
+    {%- endif %}
+    {%- if pageType == "delivery" %},
+    {
+      "@type": "BreadcrumbList",
+      "@id": {{ (site.origin + page.url + "#breadcrumb") | dump | safe }},
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home",
+          "item": {{ (site.origin + "/") | dump | safe }} },
+        { "@type": "ListItem", "position": 2, "name": "Services",
+          "item": {{ (site.origin + "/services.html") | dump | safe }} },
+        { "@type": "ListItem", "position": 3, "name": "Local delivery",
+          "item": {{ (site.origin + page.url) | dump | safe }} }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": {{ (site.origin + page.url + "#service") | dump | safe }},
+      "name": "Local delivery",
+      "serviceType": "Local delivery",
+      "url": {{ (site.origin + page.url) | dump | safe }},
+      "provider": { "@id": {{ (site.origin + "/#store") | dump | safe }} },
+      "areaServed": [
+        { "@type": "City", "name": "Yonkers" },
+        { "@type": "City", "name": "Bronxville" },
+        { "@type": "City", "name": "Mount Vernon" },
+        { "@type": "City", "name": "Hastings-on-Hudson" }
+      ]
+    }
+    {%- endif %}
+    {%- if pageType == "guide" %},
+    {
+      "@type": "BreadcrumbList",
+      "@id": {{ (site.origin + page.url + "#breadcrumb") | dump | safe }},
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home",
+          "item": {{ (site.origin + "/") | dump | safe }} },
+        { "@type": "ListItem", "position": 2, "name": "Guides",
+          "item": {{ (site.origin + "/guides/") | dump | safe }} },
+        { "@type": "ListItem", "position": 3, "name": {{ shortTitle | striptags | dump | safe }},
+          "item": {{ (site.origin + page.url) | dump | safe }} }
+      ]
+    },
+    {
+      "@type": "Article",
+      "@id": {{ (site.origin + page.url + "#article") | dump | safe }},
+      "headline": {{ h1 | striptags | dump | safe }},
+      "description": {{ description | striptags | dump | safe }},
+      "url": {{ (site.origin + page.url) | dump | safe }},
+      "isPartOf": { "@id": {{ (site.origin + "/guides/") | dump | safe }} },
+      "publisher": { "@id": {{ (site.origin + "/#store") | dump | safe }} },
+      "author": { "@id": {{ (site.origin + "/#store") | dump | safe }} }
+      {%- if heroImage %},
+      "image": {{ (site.origin + "/images/" + heroImage) | dump | safe }}
+      {%- endif %}
+    }
+    {%- endif %}
+    {%- if pageType == "faq" %},
+    {
+      "@type": "FAQPage",
+      "@id": {{ (site.origin + page.url + "#faq") | dump | safe }},
+      "mainEntity": [
+        {%- for g in faqs %}{%- for item in g.items %}
+        {
+          "@type": "Question",
+          "name": {{ item.q | striptags | dump | safe }},
+          "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | striptags | dump | safe }} }
+        }{% if not (loop.last and g == faqs[faqs.length - 1]) %},{% endif %}
+        {%- endfor %}{%- endfor %}
+      ]
+    }
+    {%- endif %}
+    {%- if pageType == "services" %}
+      {%- for s in services %},
+    {
+      "@type": "Service",
+      "@id": {{ (site.origin + page.url + "#" + s.id) | dump | safe }},
+      "name": {{ s.name | striptags | dump | safe }},
+      "serviceType": {{ s.name | striptags | dump | safe }},
+      "url": {{ (site.origin + page.url + "#" + s.id) | dump | safe }},
+      "provider": { "@id": {{ (site.origin + "/#store") | dump | safe }} },
+      "areaServed": {
+        "@type": "City",
+        "name": {{ site.address.city | dump | safe }}
+      }
+    }
+      {%- endfor %},
+    {
+      "@type": "FAQPage",
+      "@id": {{ (site.origin + page.url + "#faq") | dump | safe }},
+      "mainEntity": [
+        {%- for item in servicefaqs %}
+        {
+          "@type": "Question",
+          "name": {{ item.q | striptags | dump | safe }},
+          "acceptedAnswer": { "@type": "Answer", "text": {{ item.a | striptags | dump | safe }} }
+        }{% if not loop.last %},{% endif %}
+        {%- endfor %}
+      ]
+    }
+    {%- endif %}
+  ]
+}
+</script>

@@ -1,0 +1,105 @@
+{
+ "h1": "Roofing &amp; Masonry Department",
+ "sidebar": [
+  {
+   "id": "roofcmt",
+   "label": "Roof Cements &amp; Coatings"
+  },
+  {
+   "id": "leak",
+   "label": "Leak Repair &amp; Flashing"
+  },
+  {
+   "id": "concrete",
+   "label": "Concrete, Mortar &amp; Stucco"
+  },
+  {
+   "id": "tile",
+   "label": "Tile &amp; Stone Setting"
+  },
+  {
+   "id": "tools",
+   "label": "Masonry Tools &amp; Safety"
+  }
+ ],
+ "sections": [
+  {
+   "id": "roofcmt",
+   "heading": "Roof Cements &amp; Coatings",
+   "intro": "Seal, protect and extend roof life.",
+   "bullets": [
+    "Henry® 208R Rubberized Wet Patch &amp; 287 Solar-Flex white roof coating",
+    "Black Jack® All-Weather Roof Cement &amp; aluminum fibered coating",
+    "Snow Roof® elastomeric reflective coatings",
+    "Fibered &amp; non-fibered asphalt foundation coatings"
+   ],
+   "image": "dept-roofing-cement-01.webp"
+  },
+  {
+   "id": "leak",
+   "heading": "Leak Repair, Flashing &amp; Tape",
+   "intro": "Quick fixes that weather the storm.",
+   "bullets": [
+    "Flex Seal® Liquid &amp; tape (black, white, clear)",
+    "Aluminum roll flashing, drip edge &amp; valley metal",
+    "Roofing felt (15- &amp; 30-lb) and synthetic underlayment",
+    "Gutter sealants, patch kits &amp; mesh fabric"
+   ],
+   "image": "dept-roofing-coatings-01.webp"
+  },
+  {
+   "id": "concrete",
+   "heading": "Concrete, Mortar &amp; Stucco",
+   "intro": "Build, patch and set with confidence.",
+   "bullets": [
+    "Quikrete® 5000 high-strength concrete &amp; fast-setting mix",
+    "Type N &amp; S masonry mortar, stucco base &amp; finish coat",
+    "Sand mix, vinyl concrete patch &amp; hydraulic water-stop",
+    "Cure &amp; Seal, Bond-Lok and acrylic fortifiers"
+   ]
+  },
+  {
+   "id": "tile",
+   "heading": "Tile &amp; Stone Setting Materials",
+   "intro": "Level, stick and grout like a pro.",
+   "bullets": [
+    "Custom Building Products® VersaBond® thin-set mortars",
+    "LevelQuik® self-leveling underlayment &amp; primers",
+    "Polyblend® sanded &amp; non-sanded grouts",
+    "Schluter-style uncoupling membrane &amp; trowels"
+   ]
+  },
+  {
+   "id": "tools",
+   "heading": "Masonry Tools &amp; Safety Gear",
+   "intro": "Everything but the cement truck.",
+   "bullets": [
+    "Brick, pointing &amp; margin trowels • magnesium floats",
+    "Roof shovels, hatchets &amp; coil nailers",
+    "Knee boards, rebar chairs &amp; wire mesh",
+    "N95 respirators, safety harnesses &amp; fall-protection kits"
+   ],
+   "callout": {
+    "heading": "Need a pallet or bulk pricing?",
+    "text": "We deliver concrete &amp; roof pails locally. Call {{PHONE}} for a quote.",
+    "linkUrl": "/departments.html",
+    "linkLabel": "Back to Departments"
+   }
+  }
+ ],
+ "intro": "Our roofing and masonry shelves carry roof cements and elastomeric coatings, flashing, roofing felt and leak-repair tapes, Quikrete concrete, mortar and patching compounds, thin-set and grout for tile, and the trowels, floats and safety gear that go with them. Roof products divide roughly into two jobs. Repair products &mdash; wet-patch cements and flashing tapes &mdash; are for sealing a specific failure, and most are formulated to go down on a damp or cold surface because that is when roofs leak. Coatings are a whole-surface treatment: they go over a sound roof to reflect heat and slow weathering, and they will not rescue a substrate that has already failed. Cement products have a shelf life and a temperature window, both printed on the bag.",
+ "faqs": [
+  {
+   "q": "What is the difference between concrete, mortar and cement?",
+   "a": "Cement is the binder, the grey powder that reacts with water. Concrete is cement plus sand plus stone aggregate, and it is a structural material &mdash; slabs, footings, posts. Mortar is cement plus sand with no large aggregate and additives for workability, and its job is to bond masonry units together, so it is deliberately weaker and more flexible than the brick or block it holds. Using concrete where mortar belongs gives you a joint harder than the brick, which then cracks the brick instead of the joint."
+  },
+  {
+   "q": "Can I patch a roof in the rain or the cold?",
+   "a": "Some products are made for exactly that. Wet-patch roof cements are formulated to adhere to damp surfaces and to stay workable in cold weather, which is the whole reason they exist. They are a repair, though, not a rebuild: they buy time on a specific leak. Coatings and adhesives are different &mdash; most have a minimum application temperature and need a dry, clean substrate to cure properly, and going on outside that window is the usual reason a coating fails early. The label states the conditions."
+  },
+  {
+   "q": "How much concrete does a project need?",
+   "a": "Work in volume. Length times width times depth in feet gives cubic feet; divide by 27 for cubic yards. An 80-pound bag of ready-mix yields about two-thirds of a cubic foot, so a small slab adds up quickly. Setting a fence post is the common case: a hole roughly three times the post width and a third of the post length deep, with the post set on gravel for drainage. Mix a little more than the arithmetic says, since nothing ever comes out exactly level."
+  }
+ ]
+}
