@@ -4537,7 +4537,7 @@ main:has(.guide-grid) .guide-card h2{
   .guide-showroom-hero__panel{padding:var(--space-6) var(--space-5)}
 }@media (max-width: 440px) {
   .utility-strip {
-    max-height: 8rem;
+    max-height: none;
     overflow: visible;
   }
 
