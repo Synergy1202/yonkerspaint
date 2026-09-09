@@ -4539,4 +4539,18 @@ main:has(.guide-grid) .guide-card h2{
 
 @media(max-width:480px){
   .home-gallery .gallery-grid{grid-template-columns:1fr}
+}@media (max-width: 440px) {
+  .utility-strip {
+    overflow: visible;
+  }
+
+  .utility-inner {
+    flex-wrap: wrap;
+    padding-block: var(--space-2);
+    line-height: 1.4;
+  }
+
+  .utility-item {
+    white-space: normal;
+  }
 }
