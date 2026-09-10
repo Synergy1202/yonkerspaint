@@ -15,7 +15,7 @@
     </div>
     <div class="cta-band-actions">
       <a class="btn" href="tel:{{ site.phone.tel }}">{{ icon("phone", 18) }}<span>Call {{ site.phone.display }}</span></a>
-      <a class="btn btn-outline" href="{{ site.map.link }}" target="_blank" rel="noopener">{{ icon("pin", 18) }}<span>Directions</span></a>
+      <a class="btn btn-outline" href="{{ site.map.directions or site.map.link }}" target="_blank" rel="noopener">{{ icon("pin", 18) }}<span>Directions</span></a>
       {%- if site.reviewUrl %}
       <a class="btn btn-outline" href="{{ site.reviewUrl }}" target="_blank" rel="noopener">Review us on Google</a>
       {%- endif %}

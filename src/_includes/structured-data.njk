@@ -12,6 +12,7 @@
       "@type": "HardwareStore",
       "@id": {{ (site.origin + "/#store") | dump | safe }},
       "name": {{ site.name | dump | safe }},
+      "description": {{ site.description | dump | safe }},
       "url": {{ (site.origin + "/") | dump | safe }},
       "image": {{ (site.origin + "/images/og-default.jpg") | dump | safe }},
       "logo": {{ (site.origin + "/images/yonkerslogo.png") | dump | safe }},
@@ -32,6 +33,14 @@
         "longitude": {{ site.geo.longitude }}
       },
       "hasMap": {{ site.map.link | dump | safe }},
+      "areaServed": [
+        { "@type": "City", "name": "Yonkers" },
+        { "@type": "City", "name": "Bronxville" },
+        { "@type": "City", "name": "Mount Vernon" },
+        { "@type": "City", "name": "Hastings-on-Hudson" },
+        { "@type": "AdministrativeArea", "name": "Westchester County, New York" }
+      ],
+      "knowsLanguage": ["English", "Spanish"],
       "openingHoursSpecification": [
         {%- for h in hoursOpen %}
         {
@@ -48,7 +57,10 @@
         "name": "Wheelchair accessible entrance",
         "value": true
       },
-      "sameAs": [{{ site.instagram.url | dump | safe }}]
+      "sameAs": [
+        {{ site.instagram.url | dump | safe }},
+        {{ site.map.link | dump | safe }}
+      ]
     }
     {%- if pageType == "department" %},
     {

@@ -1,6 +1,7 @@
 {
   "name": "Yonkers Paint & Hardware",
   "shortName": "Yonkers Paint & Hardware",
+  "description": "Family-run hardware store and Benjamin Moore dealer in Getty Square, downtown Yonkers, serving homeowners, property managers and contractors with paint, tools, plumbing, electrical supplies, key cutting and local delivery.",
   "origin": "https://yonkerspaintandhardware.com",
   "foundingDate": "1966",
   "email": "service@yonkerspaintandhardware.com",
@@ -44,8 +45,9 @@
   "reviewUrl": "",
   "_reviewUrl_note": "Google review short link (g.page/r/...). Left empty deliberately: when empty the site renders no review link at all, and tools/make-review-kit.js refuses to generate. Paste the owner's link here to switch both on.",
   "map": {
-    "embed": "https://www.google.com/maps?q=65+Main+Street,+Yonkers,+NY+10701&output=embed",
-    "link": "https://maps.app.goo.gl/X45mj2hnHMZPGVuTA"
+    "embed": "https://www.google.com/maps?q=Yonkers+Paint+%26+Hardware,+65+Main+Street,+Yonkers,+NY+10701&output=embed",
+    "link": "https://maps.app.goo.gl/X45mj2hnHMZPGVuTA",
+    "directions": "https://www.google.com/maps/dir/?api=1&destination=65+Main+Street%2C+Yonkers%2C+NY+10701"
   },
   "form": {
     "action": "https://formsubmit.co/service@yonkerspaintandhardware.com",

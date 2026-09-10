@@ -43,7 +43,8 @@
         {{ site.address.city }}, {{ site.address.region }} {{ site.address.postalCode }}
       </address>
       <p><a class="footer-phone" href="tel:{{ site.phone.tel }}">{{ icon("phone", 18) }}<span>{{ site.phone.display }}</span></a></p>
-      <p><a href="{{ site.map.link }}" target="_blank" rel="noopener">Get directions</a></p>
+      <p><a href="{{ site.map.directions or site.map.link }}" target="_blank" rel="noopener">Get directions</a></p>
+      <p><a href="{{ site.map.link }}" target="_blank" rel="noopener">Read Google reviews</a></p>
 
       <h2 class="footer-hours-head">{{ icon("clock", 20) }}<span>Hours</span></h2>
       <ul class="hours">

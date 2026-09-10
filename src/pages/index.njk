@@ -180,13 +180,20 @@ bodyClass: home
     </address>
     <div class="home-visit-actions">
       <a class="btn" href="tel:{{ site.phone.tel }}">Call {{ site.phone.display }}</a>
-      <a class="btn btn-outline" href="{{ site.map.link }}" target="_blank" rel="noopener">Get Directions</a>
+      <a class="btn btn-outline" href="{{ site.map.directions or site.map.link }}" target="_blank" rel="noopener">Get Directions</a>
     </div>
     <p class="home-visit-email"><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
   </div>
-  <div class="map">
-    <iframe loading="lazy" title="Map to {{ site.name }}"
-            src="{{ site.map.embed }}"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <div class="map-panel">
+    <div class="map">
+      <iframe loading="lazy" title="Map to {{ site.name }}"
+              src="{{ site.map.embed }}"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
+    </div>
+    <div class="map-actions" aria-label="Google Maps links">
+      <a class="btn btn-outline" href="{{ site.map.directions or site.map.link }}" target="_blank" rel="noopener">Get Directions</a>
+      <a class="review-all" href="{{ site.map.link }}" target="_blank" rel="noopener">Read Google Reviews</a>
+    </div>
   </div>
 </section>

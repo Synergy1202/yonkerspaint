@@ -10,8 +10,21 @@ module.exports={cr};
 if(require.main===module){
   const css=fs.readFileSync(path.join(__dirname,'..','src','css','site.css'),'utf8');
   const tok={};
-  for(const m of css.matchAll(/--([a-z0-9-]+):\s*(#[0-9a-fA-F]{3,6})\s*;/g)) tok['--'+m[1]]=m[2];
-  const v=k=>tok[k]||k;
+  // Read both direct hex tokens and token aliases such as
+  // --star: var(--secondary-dark). The modern theme intentionally uses
+  // aliases, so the contrast checker must resolve them recursively.
+  for(const m of css.matchAll(/--([a-z0-9-]+):\s*([^;]+);/g)) tok['--'+m[1]]=m[2].trim();
+  const resolve=(k,seen=new Set())=>{
+    if(/^#[0-9a-fA-F]{3,6}$/.test(k)) return k;
+    if(seen.has(k)) return k;
+    const raw=tok[k];
+    if(!raw) return k;
+    if(/^#[0-9a-fA-F]{3,6}$/.test(raw)) return raw;
+    const alias=raw.match(/^var\(\s*(--[a-z0-9-]+)\s*\)$/i);
+    if(alias){ seen.add(k); return resolve(alias[1],seen); }
+    return raw;
+  };
+  const v=k=>resolve(k);
   const PAIRS=JSON.parse(fs.readFileSync(path.join(__dirname,'contrast-pairs.json'),'utf8'));
   let fail=0;
   const rows=PAIRS.map(p=>{

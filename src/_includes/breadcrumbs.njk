@@ -1,7 +1,17 @@
-{#- Visible counterpart to the BreadcrumbList schema that structured-data.njk
-    already emits. Rendered when a page defines `crumbs` in its front matter:
-    a list of {label, url}, last item being the current page. -#}
-{%- if crumbs and crumbs.length %}
+{#- Visible breadcrumb navigation.
+    Department detail pages are paginated from `departments`, so use the live
+    `dept` item directly here instead of the computed `crumbs` array. This
+    prevents every generated department page from inheriting the first
+    department label (Paint & Finishing). -#}
+{%- if pageType == "department" and dept %}
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/index.html">Home</a></li>
+    <li><a href="/departments.html">Departments</a></li>
+    <li><span aria-current="page">{{ dept.name | safe }}</span></li>
+  </ol>
+</nav>
+{%- elif crumbs and crumbs.length %}
 <nav class="breadcrumbs" aria-label="Breadcrumb">
   <ol>
     {%- for c in crumbs %}

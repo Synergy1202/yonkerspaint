@@ -18,7 +18,7 @@ noCta: true
     <p class="contact-showroom-hero__lede">Call, email or stop by our downtown Yonkers store for paint, hardware, project supplies and practical help at the counter.</p>
     <div class="contact-showroom-hero__actions">
       <a class="btn" href="tel:{{ site.phone.tel }}">Call {{ site.phone.display }}</a>
-      <a class="btn btn-ghost" href="{{ site.map.link }}" target="_blank" rel="noopener">Get Directions</a>
+      <a class="btn btn-ghost" href="{{ site.map.directions or site.map.link }}" target="_blank" rel="noopener">Get Directions</a>
     </div>
     <div class="contact-showroom-hero__proof" aria-label="Store information">
       <span><strong>Downtown Yonkers</strong><small>Getty Square</small></span>
@@ -34,7 +34,7 @@ noCta: true
     <span><strong>Call the store</strong><small>{{ site.phone.display }}</small></span>
     <span aria-hidden="true">&rarr;</span>
   </a>
-  <a class="contact-action-card" href="{{ site.map.link }}" target="_blank" rel="noopener">
+  <a class="contact-action-card" href="{{ site.map.directions or site.map.link }}" target="_blank" rel="noopener">
     <span class="contact-action-card__icon">{{ icon("pin", 22) }}</span>
     <span><strong>Get directions</strong><small>{{ site.address.street }}, Getty Square</small></span>
     <span aria-hidden="true">&rarr;</span>
@@ -113,10 +113,17 @@ noCta: true
     </figure>
     {%- endfor %}
 
-    <div class="map contact-map">
-      <iframe loading="lazy" title="Map to {{ site.name }}"
-              src="{{ site.map.embed }}"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="map-panel contact-map-panel">
+      <div class="map contact-map">
+        <iframe loading="lazy" title="Map to {{ site.name }}"
+                src="{{ site.map.embed }}"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen></iframe>
+      </div>
+      <div class="map-actions" aria-label="Google Maps links">
+        <a class="btn btn-outline" href="{{ site.map.directions or site.map.link }}" target="_blank" rel="noopener">Get Directions</a>
+        <a class="review-all" href="{{ site.map.link }}" target="_blank" rel="noopener">Read Google Reviews</a>
+      </div>
     </div>
   </section>
 
