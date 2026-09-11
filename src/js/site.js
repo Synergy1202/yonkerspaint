@@ -146,5 +146,57 @@
     window.addEventListener('resize', function () {
       closeNav(false);
     }, { passive: true });
+
+    /* Keep contact submissions on the page. Netlify receives the encoded
+       form in the background, so visitors never wait on a third-party form
+       page or have to retry a navigation. Native submission remains the
+       no-JavaScript fallback. */
+    var contactForm = document.querySelector('form[name="contact"]');
+    if (contactForm && window.fetch && window.URLSearchParams) {
+      contactForm.addEventListener('submit', function (event) {
+        if (!contactForm.checkValidity()) return;
+        event.preventDefault();
+
+        var button = contactForm.querySelector('button[type="submit"]');
+        var status = contactForm.querySelector('.form-status');
+        var originalLabel = button ? button.textContent : '';
+        var data = new FormData(contactForm);
+
+        if (button) {
+          button.disabled = true;
+          button.textContent = 'Sending…';
+        }
+        if (status) {
+          status.hidden = false;
+          status.className = 'form-status';
+          status.textContent = 'Sending your message…';
+        }
+
+        fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(data).toString()
+        }).then(function (response) {
+          if (!response.ok) throw new Error('Submission failed');
+          contactForm.reset();
+          if (status) {
+            status.className = 'form-status is-success';
+            status.textContent = 'Message sent. Thank you — we’ll get back to you soon.';
+            status.focus();
+          }
+        }).catch(function () {
+          if (status) {
+            status.className = 'form-status is-error';
+            status.innerHTML = 'We couldn’t send that message. Please call <a href="tel:+19149633525">914-963-3525</a> or email <a href="mailto:service@yonkerspaintandhardware.com">service@yonkerspaintandhardware.com</a>.';
+            status.focus();
+          }
+        }).finally(function () {
+          if (button) {
+            button.disabled = false;
+            button.textContent = originalLabel;
+          }
+        });
+      });
+    }
   });
 })();

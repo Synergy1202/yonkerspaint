@@ -109,7 +109,7 @@
   --max:1200px;
   --header-h:5rem;
 
-  --font-head:"Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+  --font-head:"Source Sans 3", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
   --font-body:"Source Sans 3", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
 
   --ease:cubic-bezier(.32,.72,.28,1);
@@ -4718,9 +4718,104 @@ main:has(.guide-grid) .guide-card h2{
   body.department-detail-page.nav-open{
     overflow:auto !important;
   }
-  body.department-detail-page .breadcrumbs{
+body.department-detail-page .breadcrumbs{
     margin-top:0;
     padding-top:var(--space-3);
     padding-bottom:var(--space-3);
   }
+}
+
+/* PASS 13 — one deterministic mobile contract for all department pages.
+   These rules intentionally come last: older passes cannot turn the options
+   back into an oversized one-line scroller or stretch media past the viewport. */
+html,body{max-width:100%;overflow-x:clip}
+main,main > *,picture,img,iframe{min-width:0}
+/* One self-hosted family across headings, copy, controls and editorial pages.
+   This also removes the later page-specific Georgia overrides. */
+body,button,input,select,textarea,
+body h1,body h2,body h3,body h4,body h5,body h6,
+body .departments-page *,body .services-page *,body .contact-page *,
+body .about-page *,body .reviews-page *,body .faq-page *{
+  font-family:var(--font-body);
+}
+.form-status{
+  margin-top:var(--space-4);
+  padding:var(--space-3) var(--space-4);
+  border-radius:var(--radius);
+  background:var(--primary-tint);
+  color:var(--primary-dark);
+  font-weight:600;
+}
+.form-status.is-success{border-left:4px solid var(--primary)}
+.form-status.is-error{border-left:4px solid var(--secondary);background:var(--surface-alt)}
+.form-status a{text-decoration:underline;text-underline-offset:.18em}
+.contact-form .btn:disabled{cursor:wait;opacity:.72}
+
+@media(max-width:980px){
+  .department-detail-page .dept-wrapper{
+    width:100%;
+    max-width:var(--max);
+    padding-inline:var(--space-4);
+  }
+  .department-detail-page .sidebar{
+    position:relative;
+    top:auto;
+    z-index:auto;
+    width:100%;
+    margin:0;
+    padding:var(--space-4);
+    border-radius:var(--radius-lg);
+  }
+  .department-detail-page .sidebar ul{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:var(--space-2);
+    overflow:visible;
+    width:100%;
+  }
+  .department-detail-page .sidebar li,
+  .department-detail-page .sidebar li+li{flex:1 1 9rem;min-width:0;margin:0}
+  .department-detail-page .sidebar a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    min-height:2.75rem;
+    padding:var(--space-2) var(--space-3);
+    text-align:center;
+    white-space:normal;
+    overflow-wrap:anywhere;
+  }
+  .department-detail-page .dept-section,
+  .department-detail-page .dept-section-media,
+  .department-detail-page .dept-section-media picture,
+  .department-detail-page .dept-section-media img{width:100%;max-width:100%;min-width:0}
+  .department-detail-page .dept-section-media img{
+    display:block;
+    height:auto;
+    min-height:0;
+    aspect-ratio:16/9;
+    object-fit:cover;
+  }
+}
+
+@media(max-width:620px){
+  .department-detail-page .dept-wrapper{padding-inline:var(--space-3)}
+  .department-detail-page .sidebar{padding:var(--space-3)}
+  .department-detail-page .sidebar li,
+  .department-detail-page .sidebar li+li{flex-basis:calc(50% - var(--space-2))}
+  .department-detail-page .department-showroom-hero,
+  .department-detail-page .department-overview,
+  .department-detail-page .department-store-cta{width:100%;max-width:100%}
+  .department-detail-page .department-showroom-hero__panel,
+  .department-detail-page .department-overview__copy,
+  .department-detail-page .department-overview__facts,
+  .department-detail-page .department-detail-content{min-width:0;max-width:100%}
+  .department-detail-page .dept-section-media img{aspect-ratio:4/3}
+}
+
+@media(max-width:360px){
+  .department-detail-page .sidebar li,
+  .department-detail-page .sidebar li+li{flex-basis:100%}
 }

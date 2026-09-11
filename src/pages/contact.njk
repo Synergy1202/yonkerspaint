@@ -128,14 +128,14 @@ noCta: true
   </section>
 
   <aside class="contact-message-column">
-    <form class="contact-form" action="{{ site.form.action }}" method="POST">
+    <form class="contact-form" name="contact" action="/thanks.html" method="POST" data-netlify="true" netlify-honeypot="bot-field">
       <p class="section-kicker">Questions or a quote</p>
       <h2>Send Us a Message</h2>
       <p class="contact-form__lede">Tell us what you are working on and the best way to reach you. For something time-sensitive, calling the store is usually fastest.</p>
 
-      <input type="hidden" name="_honey" style="display:none">
-      <input type="hidden" name="_next" value="{{ site.origin }}/thanks.html">
-      <input type="hidden" name="_subject" value="Website enquiry - {{ site.name }}">
+      <input type="hidden" name="form-name" value="contact">
+      <p class="visually-hidden"><label>Do not fill this out: <input name="bot-field"></label></p>
+      <input type="hidden" name="subject" value="Website enquiry - {{ site.name }}">
 
       <div class="field">
         <label for="name">Name *</label>
@@ -155,6 +155,7 @@ noCta: true
       </div>
 
       <button class="btn" type="submit">Send Message</button>
+      <p class="form-status" role="status" aria-live="polite" hidden></p>
     </form>
 
     <div class="contact-callout">
